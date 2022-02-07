@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector.c
-vector.h
-C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector.h
+C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector_void.c
+vector_void.h
+C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector_void.h
 
-C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector.h
+C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector_void.h
 

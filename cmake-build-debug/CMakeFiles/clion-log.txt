@@ -1,11 +1,4 @@
 "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\oosko\CLionProjects\lab_5b
-CMake Error at CMakeLists.txt:8 (add_subdirectory):
-  The source directory
-
-    C:/Users/oosko/CLionProjects/lab_5b/libs
-
-  does not contain a CMakeLists.txt file.
-
-
--- Configuring incomplete, errors occurred!
-See also "C:/Users/oosko/CLionProjects/lab_5b/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/oosko/CLionProjects/lab_5b/cmake-build-debug

@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector.h
+stdlib.h
+-
+stdbool.h
+-
+
 C:/Users/oosko/CLionProjects/lab_5b/main.c
 stdio.h
 -
+stdint.h
+-
+libs/data_structures/vector/vector.h
+C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector.h
 
