@@ -29,13 +29,13 @@ void shrinkToFit(vector *v);
 void deleteVector(vector *v);
 
 //проверяет на то, является ли вектор пустым
-bool isEmpty(vector *v);
+bool isEmpty(const vector *v);
 
 //проверяет на то, является ли вектор полным
-bool isFull(vector *v);
+bool isFull(const vector *v);
 
 //возвращает i-ый элемент вектора v
-int getVectorValue(vector *v, size_t i);
+int getVectorValue(const vector *v, size_t i);
 
 //добавляет элемент x в конец вектора v
 void pushBack(vector *v, int x);
@@ -44,12 +44,12 @@ void pushBack(vector *v, int x);
 void popBack(vector *v);
 
 //возвращает указатель на index-ый элемент вектора
-int *atVector(vector *v, size_t index);
+int *atVector(const vector *v, size_t index);
 
 //возвращает указатель на последний элемент вектора
-int *back(vector *v);
+int *back(const vector *v);
 
 //возвращает указатель на последний элемент вектора
-int *front(vector *v);
+int *front(const vector *v);
 
 #endif //LAB_5B_VECTOR_H

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "vector.h"
 
-vector createVector(size_t n) {
+vector createVector(const size_t n) {
     vector v = {NULL, 0, n};
 
     if (n == 0)
@@ -16,7 +16,7 @@ vector createVector(size_t n) {
     return v;
 }
 
-void reserve(vector *v, size_t newCapacity) {
+void reserve(vector *v, const size_t newCapacity) {
     v->data = realloc(v->data, sizeof(int) * newCapacity);
 
     v->capacity = newCapacity;
@@ -44,19 +44,19 @@ void deleteVector(vector *v) {
     reserve(v, 0);
 }
 
-bool isEmpty(vector *v) {
+bool isEmpty(const vector *v) {
     return v->size == 0;
 }
 
-bool isFull(vector *v) {
+bool isFull(const vector *v) {
     return v->size == v->capacity;
 }
 
-int getVectorValue(vector *v, size_t i) {
+int getVectorValue(const vector *v, const size_t i) {
     return v->data[i];
 }
 
-void pushBack(vector *v, int x) {
+void pushBack(vector *v, const int x) {
     if (isFull(v))
         reserve(v, isEmpty(v) ? 1 : v->capacity * 2);
     v->data[v->size++] = x;
@@ -71,7 +71,7 @@ void popBack(vector *v) {
     v->size--;
 }
 
-int *atVector(vector *v, size_t index) {
+int *atVector(const vector *v, const size_t index) {
     if (index >= v->size) {
         fprintf(stderr, "IndexError: a[%llu] doesn't exist\n", index);
         exit(1);;
@@ -80,10 +80,10 @@ int *atVector(vector *v, size_t index) {
     return v->data + index;
 }
 
-int *back(vector *v) {
+int *back(const vector *v) {
     return atVector(v, v->size - 1);
 }
 
-int *front(vector *v) {
+int *front(const vector *v) {
     return atVector(v, 0);
 }
