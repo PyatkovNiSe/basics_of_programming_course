@@ -7,7 +7,7 @@ vector createVector(size_t n) {
     if (n == 0)
         return v;
 
-    v.data = (int*) malloc(n * sizeof(int));
+    v.data = (int *) malloc(n * sizeof(int));
     if (v.data == NULL) {
         fprintf(stderr, "bad alloc");
         exit(1);
@@ -16,14 +16,14 @@ vector createVector(size_t n) {
     return v;
 }
 
-void reserve(vector *v, size_t new_capacity) {
-    v->data = realloc (v->data, sizeof(int) * new_capacity);
+void reserve(vector *v, size_t newCapacity) {
+    v->data = realloc(v->data, sizeof(int) * newCapacity);
 
-    v->capacity = new_capacity;
-    if (new_capacity < v->size)
-        v->size = new_capacity;
+    v->capacity = newCapacity;
+    if (newCapacity < v->size)
+        v->size = newCapacity;
 
-    if (new_capacity == 0)
+    if (newCapacity == 0)
         return;
 
     if (v->data == NULL) {
@@ -43,3 +43,31 @@ void shrinkToFit(vector *v) {
 void deleteVector(vector *v) {
     reserve(v, 0);
 }
+
+bool isEmpty(vector *v) {
+    return v->size == 0;
+}
+
+bool isFull(vector *v) {
+    return v->size == v->capacity;
+}
+
+int getVectorValue(vector *v, size_t i) {
+    return v->data[i];
+}
+
+void pushBack(vector *v, int x) {
+    if (isFull(v))
+        reserve(v, isEmpty(v) ? 1 : v->capacity * 2);
+    v->data[v->size++] = x;
+}
+
+void popBack(vector *v) {
+    if (isEmpty(v)) {
+        fprintf(stderr, "vector is empty");
+        exit(1);
+    }
+
+    v->size--;
+}
+
