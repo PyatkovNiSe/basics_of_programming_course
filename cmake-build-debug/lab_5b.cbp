@@ -110,6 +110,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/test_vector.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/test_vector.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector.c">
 			<Option target="data_structures"/>
 		</Unit>

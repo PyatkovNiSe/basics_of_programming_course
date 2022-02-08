@@ -129,6 +129,30 @@ data_structures/fast:
 	cd /d C:\Users\oosko\CLionProjects\lab_5b\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/build
 .PHONY : data_structures/fast
 
+vector/test_vector.obj: vector/test_vector.c.obj
+.PHONY : vector/test_vector.obj
+
+# target to build an object file
+vector/test_vector.c.obj:
+	cd /d C:\Users\oosko\CLionProjects\lab_5b\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector.c.obj
+.PHONY : vector/test_vector.c.obj
+
+vector/test_vector.i: vector/test_vector.c.i
+.PHONY : vector/test_vector.i
+
+# target to preprocess a source file
+vector/test_vector.c.i:
+	cd /d C:\Users\oosko\CLionProjects\lab_5b\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector.c.i
+.PHONY : vector/test_vector.c.i
+
+vector/test_vector.s: vector/test_vector.c.s
+.PHONY : vector/test_vector.s
+
+# target to generate assembly for a file
+vector/test_vector.c.s:
+	cd /d C:\Users\oosko\CLionProjects\lab_5b\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/vector/test_vector.c.s
+.PHONY : vector/test_vector.c.s
+
 vector/vector.obj: vector/vector.c.obj
 .PHONY : vector/vector.obj
 
@@ -162,6 +186,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... data_structures
+	@echo ... vector/test_vector.obj
+	@echo ... vector/test_vector.i
+	@echo ... vector/test_vector.s
 	@echo ... vector/vector.obj
 	@echo ... vector/vector.i
 	@echo ... vector/vector.s
