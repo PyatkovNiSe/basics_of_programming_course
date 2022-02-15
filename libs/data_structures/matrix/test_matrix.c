@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <stdbool.h>
 
 #include "test_matrix.h"
 #include "matrix.h"
@@ -100,7 +101,7 @@ static void test_insertionSortRowsMatrixByRowCriteria_sumOfRows() {
                                                     4, 5, 6,
                                                     1, 2, 3}, 3, 3);
 
-    insertionSortRowsMatrixByRowCriteria(result, arraySum_);
+    insertionSortRowsMatrixByRowCriteria(result, (int (*)(const int *, int)) arraySum_);
 
     assert(areTwoMatricesEqual(result, assumedMatrix));
 
@@ -116,7 +117,7 @@ static void test_insertionSortColsMatrixByColCriteria_sumOfCols() {
                                                     6, 5, 4,
                                                     9, 8, 7}, 3, 3);
 
-    insertionSortColsMatrixByColCriteria(result, arraySum_);
+    insertionSortColsMatrixByColCriteria(result, (int (*)(const int *, int)) arraySum_);
 
     assert(areTwoMatricesEqual(result, assumedMatrix));
 

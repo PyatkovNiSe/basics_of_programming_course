@@ -7,9 +7,6 @@
 #include "matrix.h"
 #include "C:\Users\oosko\CLionProjects\course\libs\algorithms\algorithm.h"
 
-#define MEM_NULL_CHECK(mem) \
-    if(NULL == mem) raise("bad allocation")
-
 matrix getMemMatrix(int nRows, int nCols) {
     int **values = (int **) malloc(sizeof(int*) * nRows);
     for (int i = 0; i < nRows; i++)

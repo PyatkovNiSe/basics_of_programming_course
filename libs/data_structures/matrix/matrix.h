@@ -2,6 +2,7 @@
 #define LAB5D_MATRIX_H
 
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct matrix {
     int **values;
