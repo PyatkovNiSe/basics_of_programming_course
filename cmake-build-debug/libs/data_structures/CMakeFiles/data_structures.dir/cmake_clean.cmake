@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/data_structures.dir/matrix/matrix.c.obj"
+  "CMakeFiles/data_structures.dir/matrix/test_matrix.c.obj"
   "CMakeFiles/data_structures.dir/vector/test_vector.c.obj"
   "CMakeFiles/data_structures.dir/vector/vector.c.obj"
   "libdata_structures.a"

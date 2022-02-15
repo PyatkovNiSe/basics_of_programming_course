@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures
+# Install script for directory: C:/Users/oosko/CLionProjects/course/libs/data_structures
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

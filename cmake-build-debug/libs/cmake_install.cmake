@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/oosko/CLionProjects/lab_5b/libs
+# Install script for directory: C:/Users/oosko/CLionProjects/course/libs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/oosko/CLionProjects/lab_5b/cmake-build-debug/libs/data_structures/cmake_install.cmake")
+  include("C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/data_structures/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/algorithms/cmake_install.cmake")
 endif()
 

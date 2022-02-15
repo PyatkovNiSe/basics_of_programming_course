@@ -3,7 +3,11 @@ project(lab_5b C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(lab_5b main.c)
+add_executable(course main.c)
 
 add_subdirectory(libs)
-target_link_libraries(lab_5b data_structures)
+add_subdirectory(lab5d)
+target_link_libraries(course data_structures)
+target_link_libraries(course algorithms)
+target_link_libraries(course lab5d)
+

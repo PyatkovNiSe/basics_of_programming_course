@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector_void.c
-vector_void.h
-C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector_void.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.c
+stdlib.h
+-
+matrix.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h
 
-C:/Users/oosko/CLionProjects/lab_5b/libs/data_structures/vector/vector_void.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h
+stdlib.h
+-
 
