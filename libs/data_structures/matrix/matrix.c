@@ -244,3 +244,21 @@ matrix *createArrayOfMatricesFromArray(const int * const values,
 
     return arrayOfMatrices;
 }
+
+matrix multiplyMatrices(const matrix m1, const matrix m2) {
+    alloca(m1.nCols != m2.nRows);
+
+    matrix result = getMemMatrix(m1.nRows, m2.nCols);
+
+    int rows1 = m1.nRows;
+    int rows2 = m2.nRows;
+    int cols2 = m2.nCols;
+    for (int i = 0; i < rows1; ++i)
+        for (int j = 0; j < cols2; ++j) {
+            result.values[i][j] = 0;
+            for (int k = 0; k < rows2; ++k)
+                result.values[i][j] += m1.values[i][k] * m2.values[k][j];
+        }
+
+    return result;
+}
