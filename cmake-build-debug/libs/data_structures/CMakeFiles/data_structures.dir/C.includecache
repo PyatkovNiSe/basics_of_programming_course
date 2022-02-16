@@ -6,26 +6,8 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/oosko/CLionProjects/course/libs/algorithms/algorithm.h
-
 C:/Users/oosko/CLionProjects/course/libs/algorithms/array/array.h
 stddef.h
--
-
-C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.c
-stdio.h
--
-stdlib.h
--
-assert.h
--
-stdbool.h
--
-string.h
--
-matrix.h
-C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h
-C:/Users/oosko/CLionProjects/course/libs/algorithms/algorithm.h
 -
 
 C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h

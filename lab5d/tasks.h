@@ -7,4 +7,6 @@ void swapRowsIncludeMinAndMaxElement(matrix m);
 
 void sortRowsByNonDecreasingLargestRowElements(matrix m);
 
+void sortColsByNonDecreasingLeastColElement(matrix m);
+
 #endif //LAB_5B_TASKS_H

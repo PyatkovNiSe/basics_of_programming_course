@@ -158,3 +158,18 @@ int linearSearchMax_(const int *a, const size_t n) {
     size_t index = linearSearchFirstMaxIndex_(a, n);
     return a[index];
 }
+
+size_t linearSearchLastMinIndex_(const int* a, const size_t n) {
+    size_t minIndex = 0;
+    for (size_t i = 1; i < n; ++i) {
+        if (a[i] <= a[minIndex])
+            minIndex = i;
+    }
+
+    return minIndex;
+}
+
+int linearSearchMin_(const int* a, const size_t n) {
+    size_t index = linearSearchLastMinIndex_(a, n);
+    return a[index];
+}

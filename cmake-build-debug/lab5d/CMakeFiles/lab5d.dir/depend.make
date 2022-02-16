@@ -4,4 +4,5 @@
 lab5d/CMakeFiles/lab5d.dir/tasks.c.obj: \
  ../lab5d/tasks.c \
  ../lab5d/tasks.h \
+ ../libs/algorithms/array/array.h \
  ../libs/data_structures/matrix/matrix.h

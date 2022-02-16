@@ -12,3 +12,7 @@ void swapRowsIncludeMinAndMaxElement(matrix m) {
 void sortRowsByNonDecreasingLargestRowElements(matrix m) {
     insertionSortRowsMatrixByRowCriteria(m, (int (*)(const int *, int)) linearSearchMax_);
 }
+
+void sortColsByNonDecreasingLeastColElement(matrix m) {
+    insertionSortColsMatrixByColCriteria(m, (int (*)(const int *, int)) linearSearchMin_);
+}
