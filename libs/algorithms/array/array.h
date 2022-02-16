@@ -64,4 +64,8 @@ void deleteIf_(int *a, size_t *n, int (*deletePredicate )(int));
 // возвращает сумму элементов массива a размера n
 int arraySum_(const int *a, size_t n);
 
+size_t linearSearchFirstMaxIndex_(const int *a, size_t n);
+
+int linearSearchMax_(const int *a, size_t n);
+
 #endif //INC_5A_ARRAY_H

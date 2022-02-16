@@ -143,3 +143,18 @@ int arraySum_(const int *a, const size_t n) {
 
     return sum;
 }
+
+size_t linearSearchFirstMaxIndex_(const int *a, const size_t n) {
+    size_t maxIndex = 0;
+    for (size_t i = 1; i < n; ++i) {
+        if (a[i] > a[maxIndex])
+            maxIndex = i;
+    }
+
+    return maxIndex;
+}
+
+int linearSearchMax_(const int *a, const size_t n) {
+    size_t index = linearSearchFirstMaxIndex_(a, n);
+    return a[index];
+}
