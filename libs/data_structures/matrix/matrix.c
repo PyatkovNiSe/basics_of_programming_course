@@ -117,7 +117,7 @@ void insertionSortColsMatrixByColCriteria(matrix m,
 
     free(currentCol);
 
-    for (int i = 1; i < rows; ++i) {
+    for (int i = 1; i < cols; ++i) {
         int j = i;
         while (j != 0 && criteriaValues[j - 1] > criteriaValues[j]) {
             swapColumns(m, j - 1, j);

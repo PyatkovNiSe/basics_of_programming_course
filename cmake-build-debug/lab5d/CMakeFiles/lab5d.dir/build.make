@@ -78,17 +78,32 @@ lab5d/CMakeFiles/lab5d.dir/tasks.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab5d.dir/tasks.c.s"
 	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug\lab5d && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\oosko\CLionProjects\course\lab5d\tasks.c -o CMakeFiles\lab5d.dir\tasks.c.s
 
+lab5d/CMakeFiles/lab5d.dir/tasks_test.c.obj: lab5d/CMakeFiles/lab5d.dir/flags.make
+lab5d/CMakeFiles/lab5d.dir/tasks_test.c.obj: ../lab5d/tasks_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\oosko\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object lab5d/CMakeFiles/lab5d.dir/tasks_test.c.obj"
+	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug\lab5d && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\lab5d.dir\tasks_test.c.obj -c C:\Users\oosko\CLionProjects\course\lab5d\tasks_test.c
+
+lab5d/CMakeFiles/lab5d.dir/tasks_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab5d.dir/tasks_test.c.i"
+	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug\lab5d && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\oosko\CLionProjects\course\lab5d\tasks_test.c > CMakeFiles\lab5d.dir\tasks_test.c.i
+
+lab5d/CMakeFiles/lab5d.dir/tasks_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab5d.dir/tasks_test.c.s"
+	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug\lab5d && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\oosko\CLionProjects\course\lab5d\tasks_test.c -o CMakeFiles\lab5d.dir\tasks_test.c.s
+
 # Object files for target lab5d
 lab5d_OBJECTS = \
-"CMakeFiles/lab5d.dir/tasks.c.obj"
+"CMakeFiles/lab5d.dir/tasks.c.obj" \
+"CMakeFiles/lab5d.dir/tasks_test.c.obj"
 
 # External object files for target lab5d
 lab5d_EXTERNAL_OBJECTS =
 
 lab5d/liblab5d.a: lab5d/CMakeFiles/lab5d.dir/tasks.c.obj
+lab5d/liblab5d.a: lab5d/CMakeFiles/lab5d.dir/tasks_test.c.obj
 lab5d/liblab5d.a: lab5d/CMakeFiles/lab5d.dir/build.make
 lab5d/liblab5d.a: lab5d/CMakeFiles/lab5d.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\oosko\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library liblab5d.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\oosko\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library liblab5d.a"
 	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug\lab5d && $(CMAKE_COMMAND) -P CMakeFiles\lab5d.dir\cmake_clean_target.cmake
 	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug\lab5d && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab5d.dir\link.txt --verbose=$(VERBOSE)
 

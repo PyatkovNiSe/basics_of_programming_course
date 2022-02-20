@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "test_matrix.h"
 #include "matrix.h"

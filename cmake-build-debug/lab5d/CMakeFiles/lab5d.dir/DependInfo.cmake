@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/oosko/CLionProjects/course/lab5d/tasks.c" "C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5d/CMakeFiles/lab5d.dir/tasks.c.obj"
+  "C:/Users/oosko/CLionProjects/course/lab5d/tasks_test.c" "C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5d/CMakeFiles/lab5d.dir/tasks_test.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

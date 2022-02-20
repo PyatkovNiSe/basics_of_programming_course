@@ -11,4 +11,6 @@ void sortColsByMinElement(matrix m);
 
 void getSquareOfMatrixIfSymmetric(matrix *m);
 
-#endif //LAB_5B_TASKS_H
+void transposeIfMatrixHasNotEqualSumOfRows(matrix m);
+
+#endif

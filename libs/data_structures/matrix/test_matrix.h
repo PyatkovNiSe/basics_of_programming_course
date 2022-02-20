@@ -3,4 +3,4 @@
 
 void test_matrix();
 
-#endif //LAB_5B_TEST_MATRIX_H
+#endif

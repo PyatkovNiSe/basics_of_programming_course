@@ -153,6 +153,30 @@ tasks.c.s:
 	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f lab5d\CMakeFiles\lab5d.dir\build.make lab5d/CMakeFiles/lab5d.dir/tasks.c.s
 .PHONY : tasks.c.s
 
+tasks_test.obj: tasks_test.c.obj
+.PHONY : tasks_test.obj
+
+# target to build an object file
+tasks_test.c.obj:
+	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f lab5d\CMakeFiles\lab5d.dir\build.make lab5d/CMakeFiles/lab5d.dir/tasks_test.c.obj
+.PHONY : tasks_test.c.obj
+
+tasks_test.i: tasks_test.c.i
+.PHONY : tasks_test.i
+
+# target to preprocess a source file
+tasks_test.c.i:
+	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f lab5d\CMakeFiles\lab5d.dir\build.make lab5d/CMakeFiles/lab5d.dir/tasks_test.c.i
+.PHONY : tasks_test.c.i
+
+tasks_test.s: tasks_test.c.s
+.PHONY : tasks_test.s
+
+# target to generate assembly for a file
+tasks_test.c.s:
+	cd /d C:\Users\oosko\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f lab5d\CMakeFiles\lab5d.dir\build.make lab5d/CMakeFiles/lab5d.dir/tasks_test.c.s
+.PHONY : tasks_test.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -165,6 +189,9 @@ help:
 	@echo ... tasks.obj
 	@echo ... tasks.i
 	@echo ... tasks.s
+	@echo ... tasks_test.obj
+	@echo ... tasks_test.i
+	@echo ... tasks_test.s
 .PHONY : help
 
 

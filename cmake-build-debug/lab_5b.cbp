@@ -188,6 +188,12 @@
 		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5d/tasks.h">
 			<Option target="lab5d"/>
 		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5d/tasks_test.c">
+			<Option target="lab5d"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5d/tasks_test.h">
+			<Option target="lab5d"/>
+		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/course/libs/algorithms/algorithm.c">
 			<Option target="algorithms"/>
 		</Unit>
