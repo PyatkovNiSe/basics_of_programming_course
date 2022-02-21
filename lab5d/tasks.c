@@ -62,6 +62,10 @@ static bool isUnique(const long long *const a, const int n) {
     return true;
 }
 
+static int min2(const int x, const int y) {
+    return x < y ? x : y;
+}
+
 void swapRowsIncludeMinAndMaxElement(matrix m) {
     position posMax = getMaxValuePos(m);
     position posMin = getMinValuePos(m);
@@ -137,4 +141,24 @@ long long findSumOfMaxesOfPseudoDiagonal(const matrix m) {
     }
 
     return sum;
+}
+
+int getMinInArea(matrix m) {
+    position pos = getMaxValuePos(m);
+    int rowIndex = pos.rowIndex;
+    int leftBoarder = pos.colIndex;
+    int rightBoarder = leftBoarder;
+    int min = m.values[rowIndex][leftBoarder];
+
+    while (rowIndex >= 0) {
+        for (int k = leftBoarder; k <= rightBoarder; ++k)
+            min = min2(min, m.values[rowIndex][k]);
+        if (leftBoarder > 0)
+            leftBoarder--;
+        if (rightBoarder + 1 < m.nCols)
+            rightBoarder++;
+        rowIndex--;
+    }
+
+    return min;
 }

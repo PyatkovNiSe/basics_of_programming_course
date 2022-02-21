@@ -122,6 +122,26 @@ static void test_findSumOfMaxesOfPseudoDiagonal_commonCase() {
     freeMemMatrix(m);
 }
 
+static void test_getMinInArea_commonCase1() {
+    matrix m = createMatrixFromArray((int[]) {10, 7, 5, 6,
+                                              3, 11, 8, 9,
+                                              4, 1, 12, 2}, 3, 4);
+
+    assert(getMinInArea(m) == 5);
+
+    freeMemMatrix(m);
+}
+
+static void test_getMinInArea_commonCase2() {
+    matrix m = createMatrixFromArray((int[]) {6, 8, 9, 2,
+                                              7, 12, 3, 4,
+                                              10, 11, 5, 1}, 3, 4);
+
+    assert(getMinInArea(m) == 6);
+
+    freeMemMatrix(m);
+}
+
 void tasks_test() {
     test_swapRowsWithMaxMinElements_commonCase();
     test_sortRowsByMaxElement_commonCase();
@@ -131,4 +151,6 @@ void tasks_test() {
     test_transposeIfMatrixHasNotEqualSumOfRows_commonCase();
     test_isMutuallyInverseMatrices_commonCase();
     test_findSumOfMaxesOfPseudoDiagonal_commonCase();
+    test_getMinInArea_commonCase1();
+    test_getMinInArea_commonCase2();
 }
