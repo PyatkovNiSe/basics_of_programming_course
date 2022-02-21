@@ -101,3 +101,14 @@ void transposeIfMatrixHasNotEqualSumOfRows(matrix m) {
 
     free(sumOfRows);
 }
+
+bool isMutuallyInverseMatrices(matrix m1, matrix m2) {
+    matrix result = multiplyMatrices(m1, m2);
+
+    if (isEMatrix(result)) {
+        freeMemMatrix(result);
+        return true;
+    }
+    freeMemMatrix(result);
+    return false;
+}
