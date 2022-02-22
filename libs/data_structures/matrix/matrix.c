@@ -85,48 +85,69 @@ void insertionSortRowsMatrixByRowCriteria(matrix m,
                                           int (*const criteria)(const int *const, const int)) {
     int rows = m.nRows;
     int cols = m.nCols;
-    int *criteriaValues = (int *) malloc(sizeof(int) * rows);
+    int *valuesOfCriteria = (int *) malloc(sizeof(int) * rows);
 
     for (int i = 0; i < rows; ++i)
-        criteriaValues[i] = criteria(m.values[i], cols);
+        valuesOfCriteria[i] = criteria(m.values[i], cols);
 
     for (int i = 1; i < cols; ++i) {
         int j = i;
-        while (j != 0 && criteriaValues[j - 1] > criteriaValues[j]) {
+        while (j != 0 && valuesOfCriteria[j - 1] > valuesOfCriteria[j]) {
             swapRows(m, j - 1, j);
-            swap(criteriaValues + j - 1, criteriaValues + j, sizeof(int));
+            swap(valuesOfCriteria + j - 1, valuesOfCriteria + j, sizeof(int));
             j--;
         }
     }
 
-    free(criteriaValues);
+    free(valuesOfCriteria);
+}
+
+void insertionSortRowsMatrixByRowCriteriaF(matrix m,
+                                           float (*criteria)(const int *, int)) {
+    int rows = m.nRows;
+    int cols = m.nCols;
+    float *valuesOfCriteria = (float *) malloc(sizeof(float) * rows);
+
+    for (int i = 0; i < rows; ++i)
+        valuesOfCriteria[i] = criteria(m.values[i], cols);
+
+    for (int i = 1; i < rows; ++i) {
+        int j = i;
+        while (j != 0 && valuesOfCriteria[j - 1] > valuesOfCriteria[j]) {
+            swapRows(m, j - 1, j);
+            swap(valuesOfCriteria + j - 1, valuesOfCriteria + j, sizeof(int));
+            j--;
+        }
+    }
+
+    free(valuesOfCriteria);
 }
 
 void insertionSortColsMatrixByColCriteria(matrix m,
                                           int (*const criteria)(const int *const, const int)) {
     int cols = m.nCols;
     int rows = m.nRows;
-    int *criteriaValues = (int *) malloc(cols * sizeof(int));
+    int *valuesOfCriteria = (int *) malloc(cols * sizeof(int));
     int *currentCol = (int *) malloc(rows * sizeof(int));
 
     for (int i = 0; i < cols; ++i) {
         for (int j = 0; j < rows; ++j)
             currentCol[j] = m.values[j][i];
-        criteriaValues[i] = criteria(currentCol, rows);
+        valuesOfCriteria[i] = criteria(currentCol, rows);
     }
 
     free(currentCol);
 
     for (int i = 1; i < cols; ++i) {
         int j = i;
-        while (j != 0 && criteriaValues[j - 1] > criteriaValues[j]) {
+        while (j != 0 && valuesOfCriteria[j - 1] > valuesOfCriteria[j]) {
             swapColumns(m, j - 1, j);
-            swap(criteriaValues + j - 1, criteriaValues + j, sizeof(int));
+            swap(valuesOfCriteria + j - 1, valuesOfCriteria + j, sizeof(int));
             j--;
         }
     }
 
-    free(criteriaValues);
+    free(valuesOfCriteria);
 }
 
 bool isSquareMatrix(const matrix m) {

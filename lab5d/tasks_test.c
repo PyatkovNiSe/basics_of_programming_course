@@ -142,6 +142,22 @@ static void test_getMinInArea_commonCase2() {
     freeMemMatrix(m);
 }
 
+void test_sortByDistances_commonCase() {
+    matrix result = createMatrixFromArray((int[]) {3, 1, 2, 4,
+                                                   0, 0, 0, 1,
+                                                   4, 6, 1, 3}, 3, 4);
+    matrix assumedMatrix = createMatrixFromArray((int[]) {0, 0, 0, 1,
+                                                          3, 1, 2, 4,
+                                                          4, 6, 1, 3}, 3, 4);
+
+    sortByDistances(result);
+
+    assert(areTwoMatricesEqual(assumedMatrix, result));
+
+    freeMemMatrix(result);
+    freeMemMatrix(assumedMatrix);
+}
+
 void tasks_test() {
     test_swapRowsWithMaxMinElements_commonCase();
     test_sortRowsByMaxElement_commonCase();
@@ -153,4 +169,5 @@ void tasks_test() {
     test_findSumOfMaxesOfPseudoDiagonal_commonCase();
     test_getMinInArea_commonCase1();
     test_getMinInArea_commonCase2();
+    test_sortByDistances_commonCase();
 }

@@ -50,12 +50,17 @@ void swapColumns(matrix m, int i, int j);
 //сортитрует строки матрицы m по неубыванию значения
 //функции criteria применяемой для строк
 void insertionSortRowsMatrixByRowCriteria(matrix m,
-                                          int (*criteria) (const int *, int));
+                                          int (*criteria)(const int *, int));
+
+//сортитрует строки матрицы m по неубыванию значения
+//функции criteria применяемой для строк
+void insertionSortRowsMatrixByRowCriteriaF(matrix m,
+                                           float (*criteria)(const int *, int));
 
 //сортирует столбцы матрицы m по неубыванию значения
 //функции criteria применяемой для столбцов
 void insertionSortColsMatrixByColCriteria(matrix m,
-                                          int (*criteria) (const int *, int));
+                                          int (*criteria)(const int *, int));
 
 //возвращает значение ’истина’, если
 //матрица m является квадратной

@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <string.h>
+#include <math.h>
 
 #include "tasks.h"
 #include "C:\Users\oosko\CLionProjects\course\libs\data_structures\matrix\matrix.h"
@@ -34,9 +35,9 @@ static long long getSum(const int *const a, const int n) {
     return sum;
 }
 
-static int longLongCmp(const void *x, const void *y) {
-    long long a = *((long long *) x);
-    long long b = *((long long *) y);
+static int cmp_long_long(const void *pa, const void *pb) {
+    long long a = *((long long *) pa);
+    long long b = *((long long *) pb);
 
     if (a < b)
         return -1;
@@ -50,7 +51,7 @@ static bool isUnique(const long long *const a, const int n) {
     long long *aCopy = (long long *) malloc(n * sizeof(long long));
 
     memcpy(aCopy, a, n * sizeof(long long));
-    qsort(aCopy, n, sizeof(long long), longLongCmp);
+    qsort(aCopy, n, sizeof(long long), cmp_long_long);
 
     for (int i = 1; i < n; ++i)
         if (aCopy[i - 1] == aCopy[i]) {
@@ -64,6 +65,14 @@ static bool isUnique(const long long *const a, const int n) {
 
 static int min2(const int x, const int y) {
     return x < y ? x : y;
+}
+
+static float getDistance(const int *const a, const int size) {
+    long long distanceSquared = 0;
+    for (int i = 0; i < size; ++i)
+        distanceSquared += a[i] * a[i];
+
+    return sqrt(distanceSquared);
 }
 
 void swapRowsIncludeMinAndMaxElement(matrix m) {
@@ -161,4 +170,8 @@ int getMinInArea(matrix m) {
     }
 
     return min;
+}
+
+void sortByDistances(matrix m) {
+    insertionSortRowsMatrixByRowCriteriaF(m, getDistance);
 }
