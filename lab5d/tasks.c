@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
 #include <math.h>
@@ -266,4 +267,43 @@ int countNonDescendingRowsMatrices(matrix *const ms, const int nMatrix) {
         counter += hasAllNonDescendingRows(ms[i]);
 
     return counter;
+}
+
+static int countValues(const int *a, int n, int value) {
+    int counter = 0;
+
+    for (int i = 0; i < n; ++i) {
+        if (a[i] == value)
+            counter++;
+    }
+
+    return counter;
+}
+
+static int countZeroRows(matrix m) {
+    int rows = m.nRows;
+    int cols = m.nCols;
+    int counter = 0;
+
+    for (int i = 0; i < rows; ++i)
+        counter += countValues(m.values[i], cols, 0) == cols;
+
+    return counter;
+}
+
+void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix) {
+    int *matricesZeroRows = (int *) malloc(sizeof(int) * nMatrix);
+
+    for (int i = 0; i < nMatrix; ++i)
+        matricesZeroRows[i] = countZeroRows(ms[i]);
+
+    int zeroRowsMax = getMax(matricesZeroRows, nMatrix);
+
+    for (int i = 0; i < nMatrix; ++i)
+        if (zeroRowsMax == matricesZeroRows[i]) {
+            outputMatrix(ms[i]);
+            printf("\n");
+        }
+
+    free(matricesZeroRows);
 }
