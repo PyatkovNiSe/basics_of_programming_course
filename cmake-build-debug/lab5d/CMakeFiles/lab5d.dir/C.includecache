@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/oosko/CLionProjects/course/lab5d/tasks.c
+stdbool.h
+-
+string.h
+-
+math.h
+-
+tasks.h
+C:/Users/oosko/CLionProjects/course/lab5d/tasks.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h
+-
+C:/Users/oosko/CLionProjects/course/libs/algorithms/array/array.h
+-
+
 C:/Users/oosko/CLionProjects/course/lab5d/tasks.h
 C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h
 -
@@ -21,6 +35,10 @@ C:/Users/oosko/CLionProjects/course/lab5d/tasks.h
 -
 
 C:/Users/oosko/CLionProjects/course/lab5d/tasks_test.h
+
+C:/Users/oosko/CLionProjects/course/libs/algorithms/array/array.h
+stddef.h
+-
 
 C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h
 stdlib.h

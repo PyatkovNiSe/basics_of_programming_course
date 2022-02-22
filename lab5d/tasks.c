@@ -18,23 +18,6 @@ static int getMax(const int *const a, const int n) {
     return max;
 }
 
-static int getMin(const int *const a, const int n) {
-    int min = a[0];
-    for (int i = 0; i < n; ++i)
-        if (a[i] < min)
-            min = a[i];
-
-    return min;
-}
-
-static long long getSum(const int *const a, const int n) {
-    long long sum = 0;
-    for (int i = 0; i < n; i++)
-        sum += a[i];
-
-    return sum;
-}
-
 static int cmp_long_long(const void *pa, const void *pb) {
     long long a = *((long long *) pa);
     long long b = *((long long *) pb);
@@ -47,35 +30,7 @@ static int cmp_long_long(const void *pa, const void *pb) {
         return 0;
 }
 
-static bool isUnique(const long long *const a, const int n) {
-    long long *aCopy = (long long *) malloc(n * sizeof(long long));
-
-    memcpy(aCopy, a, n * sizeof(long long));
-    qsort(aCopy, n, sizeof(long long), cmp_long_long);
-
-    for (int i = 1; i < n; ++i)
-        if (aCopy[i - 1] == aCopy[i]) {
-            free(aCopy);
-            return false;
-        }
-
-    free(aCopy);
-    return true;
-}
-
-static int min2(const int x, const int y) {
-    return x < y ? x : y;
-}
-
-static float getDistance(const int *const a, const int size) {
-    long long distanceSquared = 0;
-    for (int i = 0; i < size; ++i)
-        distanceSquared += a[i] * a[i];
-
-    return sqrt(distanceSquared);
-}
-
-int countNUnique(const long long *const a, const int size) {
+static int countNUnique(const long long *const a, const int size) {
     if (size == 0)
         return 0;
 
@@ -102,6 +57,15 @@ void sortRowsByMaxElement(matrix m) {
     insertionSortRowsMatrixByRowCriteria(m, getMax);
 }
 
+static int getMin(const int *const a, const int n) {
+    int min = a[0];
+    for (int i = 0; i < n; ++i)
+        if (a[i] < min)
+            min = a[i];
+
+    return min;
+}
+
 void sortColsByMinElement(matrix m) {
     insertionSortColsMatrixByColCriteria(m, getMin);
 }
@@ -117,13 +81,29 @@ void getSquareOfMatrixIfSymmetric(matrix *const m) {
     *m = square;
 }
 
+static bool isUnique(const long long *const a, const int n) {
+    long long *aCopy = (long long *) malloc(n * sizeof(long long));
+
+    memcpy(aCopy, a, n * sizeof(long long));
+    qsort(aCopy, n, sizeof(long long), cmp_long_long);
+
+    for (int i = 1; i < n; ++i)
+        if (aCopy[i - 1] == aCopy[i]) {
+            free(aCopy);
+            return false;
+        }
+
+    free(aCopy);
+    return true;
+}
+
 void transposeIfMatrixHasNotEqualSumOfRows(matrix m) {
     int rows = m.nRows;
     int cols = m.nCols;
     long long *sumOfRows = (long long *) malloc(rows * sizeof(long long));
 
     for (int i = 0; i < rows; i++)
-        sumOfRows[i] = getSum(m.values[i], cols);
+        sumOfRows[i] = arraySum_(m.values[i], cols);
 
     if (isUnique(sumOfRows, rows))
         transposeSquareMatrix(m);
@@ -168,6 +148,10 @@ long long findSumOfMaxesOfPseudoDiagonal(const matrix m) {
     return sum;
 }
 
+static int min2(const int x, const int y) {
+    return x < y ? x : y;
+}
+
 int getMinInArea(const matrix m) {
     position pos = getMaxValuePos(m);
     int rowIndex = pos.rowIndex;
@@ -188,6 +172,14 @@ int getMinInArea(const matrix m) {
     return min;
 }
 
+static float getDistance(const int *const a, const int size) {
+    long long distanceSquared = 0;
+    for (int i = 0; i < size; ++i)
+        distanceSquared += a[i] * a[i];
+
+    return sqrt(distanceSquared);
+}
+
 void sortByDistances(matrix m) {
     insertionSortRowsMatrixByRowCriteriaF(m, getDistance);
 }
@@ -198,7 +190,7 @@ int countEqClassesByRowsSum(const matrix m) {
     long long *arrayOfSums = (long long *) malloc(sizeof(long long) * rows);
 
     for (int i = 0; i < rows; ++i)
-        arrayOfSums[i] = getSum(m.values[i], cols);
+        arrayOfSums[i] = arraySum_(m.values[i], cols);
 
     int unique = countNUnique(arrayOfSums, rows);
 
@@ -220,4 +212,34 @@ int getNSpecialElement(const matrix m) {
     }
 
     return counter;
+}
+
+static position getLeftMin(matrix m) {
+    position minPos = (position) {0, 0};
+
+    for (int i = 0; i < m.nRows; ++i) {
+        for (int j = 0; j < m.nCols; ++j) {
+            int min = m.values[minPos.rowIndex][minPos.colIndex];
+            if (j < minPos.colIndex && m.values[i][j] == min ||
+                m.values[i][j] < min)
+                minPos = (position) {i, j};
+        }
+    }
+
+    return minPos;
+}
+
+void swapPenultimateRow(matrix m) {
+    int minColIndex = getLeftMin(m).colIndex;
+    int penultimateRow = m.nRows - 2;
+    int rows = m.nRows;
+
+    int *minCol = (int *) malloc(sizeof(int) * rows);
+
+    for (int i = 0; i < rows; ++i)
+        minCol[i] = m.values[i][minColIndex];
+
+    memcpy(m.values[penultimateRow], minCol, sizeof(int) * m.nCols);
+
+    free(minCol);
 }
