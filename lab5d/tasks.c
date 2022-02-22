@@ -106,7 +106,7 @@ void sortColsByMinElement(matrix m) {
     insertionSortColsMatrixByColCriteria(m, getMin);
 }
 
-void getSquareOfMatrixIfSymmetric(matrix *m) {
+void getSquareOfMatrixIfSymmetric(matrix *const m) {
     if (!isSymmetricMatrix(*m))
         return;
 
@@ -131,7 +131,7 @@ void transposeIfMatrixHasNotEqualSumOfRows(matrix m) {
     free(sumOfRows);
 }
 
-bool isMutuallyInverseMatrices(matrix m1, matrix m2) {
+bool isMutuallyInverseMatrices(const matrix m1, const matrix m2) {
     matrix result = multiplyMatrices(m1, m2);
 
     if (isEMatrix(result)) {
@@ -168,7 +168,7 @@ long long findSumOfMaxesOfPseudoDiagonal(const matrix m) {
     return sum;
 }
 
-int getMinInArea(matrix m) {
+int getMinInArea(const matrix m) {
     position pos = getMaxValuePos(m);
     int rowIndex = pos.rowIndex;
     int leftBoarder = pos.colIndex;
@@ -205,4 +205,19 @@ int countEqClassesByRowsSum(const matrix m) {
     free(arrayOfSums);
 
     return unique;
+}
+
+int getNSpecialElement(const matrix m) {
+    int counter = 0;
+
+    for (int i = 0; i < m.nCols; ++i) {
+        long long currentSum = 0;
+        for (int j = 0; j < m.nRows; ++j)
+            currentSum += m.values[j][i];
+        for (int j = 0; j < m.nRows; ++j)
+            if (currentSum < 2 * m.values[j][i])
+                counter++;
+    }
+
+    return counter;
 }

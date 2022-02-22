@@ -15,4 +15,14 @@ void transposeIfMatrixHasNotEqualSumOfRows(matrix m);
 
 bool isMutuallyInverseMatrices(matrix m1, matrix m2);
 
+long long findSumOfMaxesOfPseudoDiagonal(matrix m);
+
+int getMinInArea(matrix m);
+
+void sortByDistances(matrix m);
+
+int countEqClassesByRowsSum(matrix m);
+
+int getNSpecialElement(matrix m);
+
 #endif

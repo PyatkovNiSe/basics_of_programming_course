@@ -1,7 +1,8 @@
+#include <stdio.h>
 #include <assert.h>
 
 #include "tasks_test.h"
-#include "C:\Users\oosko\CLionProjects\course\lab5d\tasks.c"
+#include "C:\Users\oosko\CLionProjects\course\lab5d\tasks.h"
 
 static void test_swapRowsWithMaxMinElements_commonCase() {
     matrix result = createMatrixFromArray((int[]) {3, 9, 3,
@@ -174,6 +175,19 @@ static void test_countEqClassesByRowsSum_commonCase() {
     freeMemMatrix(m);
 }
 
+void test_getNSpecialElement_commonCase() {
+    matrix m = createMatrixFromArray((int[]) {3, 5, 5, 4,
+                                              2, 3, 6, 7,
+                                              12, 2, 1, 2}, 3, 4);
+
+    int result = getNSpecialElement(m);
+    int assumedResult = 2;
+
+    assert(result == assumedResult);
+
+    freeMemMatrix(m);
+}
+
 void tasks_test() {
     test_swapRowsWithMaxMinElements_commonCase();
     test_sortRowsByMaxElement_commonCase();
@@ -187,4 +201,5 @@ void tasks_test() {
     test_getMinInArea_commonCase2();
     test_sortByDistances_commonCase();
     test_countEqClassesByRowsSum_commonCase();
+    test_getNSpecialElement_commonCase();
 }

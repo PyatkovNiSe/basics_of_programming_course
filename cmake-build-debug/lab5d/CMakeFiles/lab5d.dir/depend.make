@@ -7,9 +7,7 @@ lab5d/CMakeFiles/lab5d.dir/tasks.c.obj: \
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/matrix/matrix.h
 lab5d/CMakeFiles/lab5d.dir/tasks_test.c.obj: \
- ../lab5d/tasks.c \
  ../lab5d/tasks.h \
  ../lab5d/tasks_test.c \
  ../lab5d/tasks_test.h \
- ../libs/algorithms/array/array.h \
  ../libs/data_structures/matrix/matrix.h
