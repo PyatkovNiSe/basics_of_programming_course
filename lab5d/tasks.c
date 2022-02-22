@@ -75,6 +75,22 @@ static float getDistance(const int *const a, const int size) {
     return sqrt(distanceSquared);
 }
 
+int countNUnique(const long long *const a, const int size) {
+    if (size == 0)
+        return 0;
+
+    long long *aCopy = (long long *) malloc(size * sizeof(long long));
+    memcpy(aCopy, a, size * sizeof(long long));
+    qsort(aCopy, size, sizeof(long long), cmp_long_long);
+
+    int counter = 1;
+    for (int i = 1; i < size; ++i)
+        if (aCopy[i - 1] != aCopy[i])
+            counter++;
+
+    return counter;
+}
+
 void swapRowsIncludeMinAndMaxElement(matrix m) {
     position posMax = getMaxValuePos(m);
     position posMin = getMinValuePos(m);
@@ -174,4 +190,19 @@ int getMinInArea(matrix m) {
 
 void sortByDistances(matrix m) {
     insertionSortRowsMatrixByRowCriteriaF(m, getDistance);
+}
+
+int countEqClassesByRowsSum(const matrix m) {
+    int rows = m.nRows;
+    int cols = m.nCols;
+    long long *arrayOfSums = (long long *) malloc(sizeof(long long) * rows);
+
+    for (int i = 0; i < rows; ++i)
+        arrayOfSums[i] = getSum(m.values[i], cols);
+
+    int unique = countNUnique(arrayOfSums, rows);
+
+    free(arrayOfSums);
+
+    return unique;
 }
