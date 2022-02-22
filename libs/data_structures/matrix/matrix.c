@@ -60,7 +60,8 @@ void outputMatrix(const matrix m) {
     }
 }
 
-void outputMatrices(const matrix *const arrayOfMatrices, const int nMatrices) {
+void outputMatrices(const matrix *const arrayOfMatrices,
+                    const int nMatrices) {
     for (int i = 0; i < nMatrices; ++i) {
         outputMatrix(arrayOfMatrices[i]);
         printf("\n");

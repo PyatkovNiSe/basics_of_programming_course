@@ -35,7 +35,7 @@ static int countNUnique(const long long *const a, const int size) {
     if (size == 0)
         return 0;
 
-    long long *aCopy = (long long *) malloc(size * sizeof(long long));
+    long long *aCopy = malloc(size * sizeof(long long));
     memcpy(aCopy, a, size * sizeof(long long));
     qsort(aCopy, size, sizeof(long long), cmp_long_long);
 
@@ -101,7 +101,7 @@ static bool isUnique(const long long *const a, const int n) {
 void transposeIfMatrixHasNotEqualSumOfRows(matrix m) {
     int rows = m.nRows;
     int cols = m.nCols;
-    long long *sumOfRows = (long long *) malloc(rows * sizeof(long long));
+    long long *sumOfRows = malloc(rows * sizeof(long long));
 
     for (int i = 0; i < rows; i++)
         sumOfRows[i] = arraySum_(m.values[i], cols);
@@ -188,7 +188,7 @@ void sortByDistances(matrix m) {
 int countEqClassesByRowsSum(const matrix m) {
     int rows = m.nRows;
     int cols = m.nCols;
-    long long *arrayOfSums = (long long *) malloc(sizeof(long long) * rows);
+    long long *arrayOfSums = malloc(sizeof(long long) * rows);
 
     for (int i = 0; i < rows; ++i)
         arrayOfSums[i] = arraySum_(m.values[i], cols);
@@ -260,7 +260,8 @@ static bool hasAllNonDescendingRows(const matrix m) {
     return true;
 }
 
-int countNonDescendingRowsMatrices(matrix *const ms, const int nMatrix) {
+int countNonDescendingRowsMatrices(const matrix *const ms,
+                                   const int nMatrix) {
     int counter = 0;
 
     for (int i = 0; i < nMatrix; ++i)
@@ -291,7 +292,8 @@ static int countZeroRows(matrix m) {
     return counter;
 }
 
-void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix) {
+void printMatrixWithMaxZeroRows(const matrix *const ms,
+                                const int nMatrix) {
     int *matricesZeroRows = (int *) malloc(sizeof(int) * nMatrix);
 
     for (int i = 0; i < nMatrix; ++i)
@@ -308,11 +310,11 @@ void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix) {
     free(matricesZeroRows);
 }
 
-int matrixGetV(matrix m, position p) {
+static int matrixGetV(matrix m, position p) {
     return m.values[p.rowIndex][p.colIndex];
 }
 
-void printMatrixWithMinNorm(matrix *ms, int nMatrices) {
+void printMatrixWithMinNorm(const matrix *const ms, const int nMatrices) {
     int* normsOfMatrix = (int *) malloc(sizeof(int) * nMatrices);
 
     for (int i = 0; i < nMatrices; i++) {

@@ -27,10 +27,10 @@ int getNSpecialElement(matrix m);
 
 void swapPenultimateRow(matrix m);
 
-int countNonDescendingRowsMatrices(matrix *ms, int nMatrix);
+int countNonDescendingRowsMatrices(const matrix *ms, int nMatrix);
 
-void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix);
+void printMatrixWithMaxZeroRows(const matrix *ms, int nMatrix);
 
-void printMatrixWithMinNorm(matrix *ms, int nMatrices);
+void printMatrixWithMinNorm(const matrix *ms, int nMatrices);
 
 #endif
