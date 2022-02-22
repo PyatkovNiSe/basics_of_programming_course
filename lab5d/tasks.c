@@ -3,9 +3,9 @@
 #include <string.h>
 #include <math.h>
 
+#include "../libs/data_structures/matrix/matrix.h"
+#include "../libs/algorithms/array/array.h"
 #include "tasks.h"
-#include "C:\Users\oosko\CLionProjects\course\libs\data_structures\matrix\matrix.h"
-#include "C:\Users\oosko\CLionProjects\course\libs\algorithms\array\array.h"
 
 static int max2(const int x, const int y) {
     return x > y ? x : y;

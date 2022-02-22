@@ -5,17 +5,17 @@
 #include <string.h>
 
 #include "matrix.h"
-#include "C:\Users\oosko\CLionProjects\course\libs\algorithms\algorithm.h"
+#include "../../algorithms/algorithm.h"
 
 matrix getMemMatrix(int nRows, int nCols) {
-    int **values = (int **) malloc(sizeof(int*) * nRows);
+    int **values = (int **) malloc(sizeof(int *) * nRows);
     for (int i = 0; i < nRows; i++)
         values[i] = (int *) malloc(sizeof(int) * nCols);
-    return (matrix){values, nRows, nCols};
+    return (matrix) {values, nRows, nCols};
 }
 
-matrix* getMemArrayOfMatrices(int nMatrices, int nRows, int nCols) {
-    matrix* ms = (matrix*) malloc(sizeof(matrix) * nMatrices);
+matrix *getMemArrayOfMatrices(int nMatrices, int nRows, int nCols) {
+    matrix *ms = (matrix *) malloc(sizeof(matrix) * nMatrices);
     for (int i = 0; i < nMatrices; i++)
         ms[i] = getMemMatrix(nRows, nCols);
     return ms;
@@ -31,7 +31,7 @@ void freeMemMatrix(matrix m) {
     m.nCols = 0;
 }
 
-void freeMemMatrices(matrix* ms, int nMatrices) {
+void freeMemMatrices(matrix *ms, int nMatrices) {
     for (int i = 0; i < nMatrices; i++)
         freeMemMatrix(ms[i]);
     free(ms);
@@ -253,7 +253,7 @@ matrix createMatrixFromArray(const int *const values,
     return m;
 }
 
-matrix *createArrayOfMatricesFromArray(const int * const values,
+matrix *createArrayOfMatricesFromArray(const int *const values,
                                        const int nMatrices,
                                        const int nRows, const int nCols) {
     matrix *arrayOfMatrices = getMemArrayOfMatrices(nMatrices, nRows, nCols);

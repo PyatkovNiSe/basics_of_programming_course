@@ -2,7 +2,7 @@
 #include <assert.h>
 
 #include "tasks_test.h"
-#include "C:\Users\oosko\CLionProjects\course\lab5d\tasks.h"
+#include "../lab5d/tasks.h"
 
 static void test_swapRowsWithMaxMinElements_commonCase() {
     matrix result = createMatrixFromArray((int[]) {3, 9, 3,
@@ -42,7 +42,8 @@ static void test_sortColsByMinElement_commonCase() {
                                                    6, 1, 4, 4, 8, 3}, 3, 6);
     matrix assumedMatrix = createMatrixFromArray((int[]) {5, 2, 3, 3, 3, 4,
                                                           5, 1, 2, 2, 7, 8,
-                                                          1, 4, 6, 8, 3, 4}, 3, 6);
+                                                          1, 4, 6, 8, 3, 4}, 3,
+                                                 6);
 
     sortColsByMinElement(result);
 

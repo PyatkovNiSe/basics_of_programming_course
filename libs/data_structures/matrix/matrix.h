@@ -99,4 +99,4 @@ matrix *createArrayOfMatricesFromArray(const int *values,
 
 matrix multiplyMatrices(matrix m1, matrix m2);
 
-#endif //LAB5D_MATRIX_H
+#endif
