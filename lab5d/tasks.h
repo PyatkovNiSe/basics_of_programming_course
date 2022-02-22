@@ -31,4 +31,6 @@ int countNonDescendingRowsMatrices(matrix *ms, int nMatrix);
 
 void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix);
 
+void printMatrixWithMinNorm(matrix *ms, int nMatrices);
+
 #endif

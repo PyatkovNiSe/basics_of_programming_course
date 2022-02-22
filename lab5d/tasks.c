@@ -307,3 +307,32 @@ void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix) {
 
     free(matricesZeroRows);
 }
+
+int matrixGetV(matrix m, position p) {
+    return m.values[p.rowIndex][p.colIndex];
+}
+
+void printMatrixWithMinNorm(matrix *ms, int nMatrices) {
+    int* normsOfMatrix = (int *) malloc(sizeof(int) * nMatrices);
+
+    for (int i = 0; i < nMatrices; i++) {
+        position maxPos = getMaxValuePos(ms[i]);
+        position minPos = getMinValuePos(ms[i]);
+
+
+        int max = max2(abs(matrixGetV(ms[i], maxPos)),
+                       abs(matrixGetV(ms[i], minPos)));
+        normsOfMatrix[i] = max;
+    }
+
+    int min_norm = linearSearchMin_(normsOfMatrix, nMatrices);
+
+    for (int i = 0; i < nMatrices; i++) {
+        if (normsOfMatrix[i] == min_norm) {
+            outputMatrix(ms[i]);
+            printf("\n");
+        }
+    }
+
+    free(normsOfMatrix);
+}
