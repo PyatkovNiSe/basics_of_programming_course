@@ -8,10 +8,6 @@
 
 C:/Users/oosko/CLionProjects/course/libs/algorithms/algorithm.h
 
-C:/Users/oosko/CLionProjects/course/libs/algorithms/array/array.h
-stddef.h
--
-
 C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.c
 stdio.h
 -
@@ -33,20 +29,4 @@ stdlib.h
 -
 stdbool.h
 -
-
-C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/test_matrix.c
-assert.h
--
-stdbool.h
--
-stdio.h
--
-test_matrix.h
-C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/test_matrix.h
-matrix.h
-C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h
-C:/Users/oosko/CLionProjects/course/libs/algorithms/array/array.h
--
-
-C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/test_matrix.h
 
