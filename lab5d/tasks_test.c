@@ -203,6 +203,27 @@ void test_swapPenultimateRow_commonCase() {
     freeMemMatrix(assumedMatrix);
 }
 
+void test_countNonDescendingRowsMatrices_commonCase() {
+    matrix *am = createArrayOfMatricesFromArray((int[]) {7, 1,
+                                                         1, 1,
+
+                                                         1, 6,
+                                                         2, 2,
+
+                                                         5, 4,
+                                                         2, 3,
+
+                                                         1, 3,
+                                                         7, 9}, 4, 2, 2);
+
+    int result = countNonDescendingRowsMatrices(am, 4);
+    int assumedResult = 2;
+
+    assert(result == assumedResult);
+
+    freeMemMatrices(am, 4);
+}
+
 void tasks_test() {
     test_swapRowsWithMaxMinElements_commonCase();
     test_sortRowsByMaxElement_commonCase();

@@ -240,6 +240,30 @@ void swapPenultimateRow(matrix m) {
         minCol[i] = m.values[i][minColIndex];
 
     memcpy(m.values[penultimateRow], minCol, sizeof(int) * m.nCols);
-
     free(minCol);
+}
+
+static bool isNonDescendingSorted(const int *const a, const int n) {
+    for (int i = 1; i < n; ++i)
+        if (a[i - 1] > a[i])
+            return false;
+    return true;
+}
+
+static bool hasAllNonDescendingRows(const matrix m) {
+    int rows = m.nRows;
+
+    for (int i = 0; i < rows; ++i)
+        if (!isNonDescendingSorted(m.values[i], rows))
+            return false;
+    return true;
+}
+
+int countNonDescendingRowsMatrices(matrix *const ms, const int nMatrix) {
+    int counter = 0;
+
+    for (int i = 0; i < nMatrix; ++i)
+        counter += hasAllNonDescendingRows(ms[i]);
+
+    return counter;
 }
