@@ -4,7 +4,7 @@
 
 #include "test_matrix.h"
 #include "matrix.h"
-#include "C:\Users\oosko\CLionProjects\course\libs\algorithms\array\array.h"
+#include "../../algorithms/array/array.h"
 
 static void test_getMemMatrix_CommonCase() {
     matrix m = getMemMatrix(3, 4);

@@ -45,8 +45,30 @@ test_matrix.h
 C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/test_matrix.h
 matrix.h
 C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/matrix.h
+../../algorithms/array/array.h
 C:/Users/oosko/CLionProjects/course/libs/algorithms/array/array.h
--
 
 C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/test_matrix.h
+
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/test_vector.c
+assert.h
+-
+test_vector.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/test_vector.h
+vector.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/vector.h
+
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/test_vector.h
+
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/vector.c
+stdio.h
+-
+vector.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/vector.h
+
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/vector.h
+stdlib.h
+-
+stdbool.h
+-
 

@@ -25,6 +25,8 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/DependInfo.cmake"
   "C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/DependInfo.cmake"
   "C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5d/CMakeFiles/lab5d.dir/DependInfo.cmake"
+  "C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5e/CMakeFiles/lab5e.dir/DependInfo.cmake"
+  "C:/Users/oosko/CLionProjects/course/cmake-build-debug/string/tasks/CMakeFiles/tasks.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

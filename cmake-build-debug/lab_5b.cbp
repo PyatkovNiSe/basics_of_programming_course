@@ -194,6 +194,18 @@
 		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5d/tasks_test.h">
 			<Option target="lab5d"/>
 		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5e/tasks.c">
+			<Option target="course"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5e/tasks.h">
+			<Option target="course"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5e/tasks_test.c">
+			<Option target="course"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5e/tasks_test.h">
+			<Option target="course"/>
+		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/course/libs/algorithms/algorithm.c">
 			<Option target="algorithms"/>
 		</Unit>
@@ -231,6 +243,12 @@
 			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/course/main.c">
+			<Option target="course"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/string/tasks/string_.c">
+			<Option target="course"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/string/tasks/string_.h">
 			<Option target="course"/>
 		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/course/CMakeLists.txt">

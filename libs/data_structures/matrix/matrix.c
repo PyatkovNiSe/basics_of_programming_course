@@ -82,8 +82,8 @@ void swapColumns(matrix m, const int i, const int j) {
         swap(&m.values[k][i], &m.values[k][j], sizeof(int));
 }
 
-void insertionSortRowsMatrixByRowCriteria(matrix m,
-                                          int (*const criteria)(const int *const, const int)) {
+void insertionSortRowsMatrixByRowCriteria(
+        matrix m, int (*const criteria)(const int *const, const int)) {
     int rows = m.nRows;
     int cols = m.nCols;
     int *valuesOfCriteria = (int *) malloc(sizeof(int) * rows);
@@ -103,8 +103,8 @@ void insertionSortRowsMatrixByRowCriteria(matrix m,
     free(valuesOfCriteria);
 }
 
-void insertionSortRowsMatrixByRowCriteriaF(matrix m,
-                                           float (*criteria)(const int *, int)) {
+void insertionSortRowsMatrixByRowCriteriaF(
+        matrix m, float (*criteria)(const int *, int)) {
     int rows = m.nRows;
     int cols = m.nCols;
     float *valuesOfCriteria = (float *) malloc(sizeof(float) * rows);
@@ -124,8 +124,8 @@ void insertionSortRowsMatrixByRowCriteriaF(matrix m,
     free(valuesOfCriteria);
 }
 
-void insertionSortColsMatrixByColCriteria(matrix m,
-                                          int (*const criteria)(const int *const, const int)) {
+void insertionSortColsMatrixByColCriteria(
+        matrix m, int (*const criteria)(const int *const, const int)) {
     int cols = m.nCols;
     int rows = m.nRows;
     int *valuesOfCriteria = (int *) malloc(cols * sizeof(int));
