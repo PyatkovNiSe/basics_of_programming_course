@@ -1,0 +1,1 @@
+add_library(tasks string_.h string_.c string_test.c string_test.h)

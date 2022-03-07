@@ -6,3 +6,27 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/oosko/CLionProjects/course/lab5d/tasks_test.h
+
+C:/Users/oosko/CLionProjects/course/lab5e/lab5e_test.h
+
+C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/test_matrix.h
+
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/test_vector.h
+
+C:/Users/oosko/CLionProjects/course/main.c
+stdio.h
+-
+libs/data_structures/vector/test_vector.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/test_vector.h
+libs/data_structures/matrix/test_matrix.h
+C:/Users/oosko/CLionProjects/course/libs/data_structures/matrix/test_matrix.h
+lab5d/tasks_test.h
+C:/Users/oosko/CLionProjects/course/lab5d/tasks_test.h
+string/tasks/string_test.h
+C:/Users/oosko/CLionProjects/course/string/tasks/string_test.h
+lab5e/lab5e_test.h
+C:/Users/oosko/CLionProjects/course/lab5e/lab5e_test.h
+
+C:/Users/oosko/CLionProjects/course/string/tasks/string_test.h
+

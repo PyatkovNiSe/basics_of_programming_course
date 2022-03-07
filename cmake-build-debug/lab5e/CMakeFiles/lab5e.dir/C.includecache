@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/oosko/CLionProjects/course/lab5e/lab5e_test.c
+lab5e_test.h
+C:/Users/oosko/CLionProjects/course/lab5e/lab5e_test.h
+../string/tasks/string_.h
+C:/Users/oosko/CLionProjects/course/string/tasks/string_.h
+../lab5e/tasks.h
+C:/Users/oosko/CLionProjects/course/lab5e/tasks.h
+stdio.h
+-
+
+C:/Users/oosko/CLionProjects/course/lab5e/lab5e_test.h
+
+C:/Users/oosko/CLionProjects/course/lab5e/tasks.h
+
+C:/Users/oosko/CLionProjects/course/string/tasks/string_.h
+stdlib.h
+-
+stdbool.h
+-
+

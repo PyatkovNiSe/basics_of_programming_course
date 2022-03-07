@@ -3,6 +3,8 @@
 
 CMakeFiles/course.dir/main.c.obj: \
  ../lab5d/tasks_test.h \
+ ../lab5e/lab5e_test.h \
  ../libs/data_structures/matrix/test_matrix.h \
  ../libs/data_structures/vector/test_vector.h \
- ../main.c
+ ../main.c \
+ ../string/tasks/string_test.h
