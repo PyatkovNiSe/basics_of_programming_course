@@ -28,6 +28,16 @@ static void test_removeNonLetters_commonCase() {
     ASSERT_STRING(res, str);
 }
 
+static void test_removeAdjacentEqualLetters_commonCase() {
+    char str[] = "qqqqwwwweeeerty234riot";
+    removeAdjacentEqualLetters(str);
+
+    char assumedStr[] = "qwerty234riot";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
+    test_removeAdjacentEqualLetters_commonCase();
 }
