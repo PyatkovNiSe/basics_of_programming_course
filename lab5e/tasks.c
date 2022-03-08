@@ -3,18 +3,6 @@
 #include <ctype.h>
 #include <memory.h>
 
-static bool alwaysTrue(int ch) {
-    return true;
-}
-
-static void reverseWord(WordDescriptor word) {
-    char *endBuffer = copyIfReverse(word.end - 1,
-                                    word.begin - 1,
-                                    _stringBuffer,
-                                    alwaysTrue);
-    copy(_stringBuffer, endBuffer, word.begin);
-}
-
 void removeNonLetters(char *s) {
     char *endSrc = getEndOfString(s);
     char *dest = copyIf(s, endSrc, s, (bool (*)(int)) isgraph);
@@ -48,6 +36,18 @@ void removeExtraSpaces(char *s) {
         s++;
     }
     *(++writePos) = '\0';
+}
+
+static bool alwaysTrue(int ch) {
+    return true;
+}
+
+static void reverseWord(WordDescriptor word) {
+    char *endBuffer = copyIfReverse(word.end - 1,
+                                    word.begin - 1,
+                                    _stringBuffer,
+                                    alwaysTrue);
+    copy(_stringBuffer, endBuffer, word.begin);
 }
 
 void reverseWordsInString(char *s) {
@@ -130,6 +130,33 @@ void printWordsInReverseOrder(char *s) {
     WordDescriptor *end = _bag.words;
     for (WordDescriptor *start = _bag.words + _bag.size - 1; start >= end; start--)
         printWord(*start);
+}
+
+static bool isPalindrome(WordDescriptor word) {
+    char *start = word.begin;
+    char *end = word.end - 1;
+
+    while (start < end) {
+        if (*start != *end)
+            return false;
+        start++;
+        end--;
+    }
+
+    return true;
+}
+
+int countPalindromeWordsSeparatedWithComma(char *s) {
+    char *start = s;
+    WordDescriptor currentWord;
+
+    int counter = 0;
+    while (getWordCommaSeparated(start, &currentWord)) {
+        counter += isPalindrome(currentWord);
+        start = currentWord.end + (*currentWord.end != '\0');
+    }
+
+    return counter;
 }
 
 void makeMixedStringFromTwo(char *s1, char *s2, char *sWrite) {
