@@ -38,4 +38,7 @@ int countPalindromeWordsSeparatedWithComma(char *s);
 // строки должны быть дописаны в строку-результат
 void makeMixedStringFromTwo(char *s1, char *s2, char *sWrite);
 
+// Преобразовать строку, изменив порядок следования слов в строке на обратный
+void reverseWordOrder(char *s);
+
 #endif

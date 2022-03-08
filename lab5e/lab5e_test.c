@@ -160,6 +160,26 @@ static void test_makeMixedStringFromTwo_emptyStrings() {
     ASSERT_STRING(assumedStr, str);
 }
 
+static void test_reverseWordOrder_commonCase() {
+    char str[MAX_STRING_SIZE] = "abcde alfabet' edcba";
+
+    reverseWordOrder(str);
+
+    char assumedStr[] = "edcba alfabet' abcde";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
+static void test_reverseWordOrder_emptyString() {
+    char str[MAX_STRING_SIZE] = "";
+
+    reverseWordOrder(str);
+
+    char assumedStr[] = "";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
@@ -176,4 +196,6 @@ void lab5e_test() {
     test_countPalindromeWordsSeparatedWithComma_emptyString();
     test_makeMixedStringFromTwo_commonCase();
     test_makeMixedStringFromTwo_emptyStrings();
+    test_reverseWordOrder_commonCase();
+    test_reverseWordOrder_emptyString();
 }
