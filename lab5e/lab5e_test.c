@@ -2,6 +2,7 @@
 #include "../string/tasks/string_.h"
 #include "../lab5e/tasks.h"
 #include <stdio.h>
+#include <assert.h>
 
 #define ASSERT_STRING(expected, got) assert_string(expected, got, \
                                 __FILE__, __FUNCTION__, __LINE__)
@@ -107,6 +108,18 @@ static void test_replaceWord_emptyString() {
     ASSERT_STRING(assumedStr, str);
 }
 
+static void test_isLexicographicOrdered_isOrdered() {
+    char str[MAX_STRING_SIZE] = "a b c d e";
+
+    assert(isLexicographicOrdered(str) == true);
+}
+
+static void test_isLexicographicOrdered_isNotOrdered() {
+    char str[MAX_STRING_SIZE] = "s a f a s f";
+
+    assert(isLexicographicOrdered(str) == false);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
@@ -117,4 +130,6 @@ void lab5e_test() {
     test_replaceNumbersWithSpaces_emptyString();
     test_replaceWord_commonCase();
     test_replaceWord_emptyString();
+    test_isLexicographicOrdered_isOrdered();
+    test_isLexicographicOrdered_isNotOrdered();
 }

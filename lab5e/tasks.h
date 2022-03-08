@@ -1,6 +1,7 @@
 #ifndef LAB_5B_TASKS_H
 #define LAB_5B_TASKS_H
 
+#include <stdbool.h>
 
 // Удалить из строки все пробельные символы
 void removeNonLetters(char *s);
@@ -22,5 +23,8 @@ void replaceNumbersWithSpaces(char *s);
 
 // Заменить все вхождения слова 𝑤1 на слово 𝑤2
 void replaceWord(char *source, char *w1, char *w2);
+
+// Определить, упорядочены ли лексикографически слова данного предложения
+bool isLexicographicOrdered(char *s);
 
 #endif
