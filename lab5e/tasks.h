@@ -27,4 +27,7 @@ void replaceWord(char *source, char *w1, char *w2);
 // Определить, упорядочены ли лексикографически слова данного предложения
 bool isLexicographicOrdered(char *s);
 
+// Вывести слова данной строки в обратном порядке по одному в строке экрана
+void printWordsInReverseOrder(char *s);
+
 #endif

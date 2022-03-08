@@ -13,6 +13,8 @@ ctype.h
 -
 memory.h
 -
+stdio.h
+-
 
 C:/Users/oosko/CLionProjects/course/string/tasks/string_.h
 stdlib.h

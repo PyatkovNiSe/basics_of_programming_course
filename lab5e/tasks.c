@@ -123,3 +123,12 @@ bool isLexicographicOrdered(char *s) {
 
     return true;
 }
+
+void printWordsInReverseOrder(char *s) {
+    getBagOfWords(&_bag, s);
+
+    WordDescriptor *end = _bag.words;
+    for (WordDescriptor *start = _bag.words + _bag.size - 1; start >= end; start--)
+        printWord(*start);
+}
+

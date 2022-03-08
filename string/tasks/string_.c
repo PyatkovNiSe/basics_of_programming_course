@@ -1,6 +1,7 @@
 #include "string_.h"
 #include <ctype.h>
 #include <memory.h>
+#include <stdio.h>
 
 size_t strlen(const char *begin) {
     const char *end = begin;
@@ -119,4 +120,23 @@ bool wordcmp(WordDescriptor w1, WordDescriptor w2) {
         return false;
 
     return memcmp(start1, start2, size) == 0;
+}
+
+void getBagOfWords(BagOfWords *bag, char *s) {
+    WordDescriptor word;
+    WordDescriptor *bagStart = bag->words;
+    char *strStart = s;
+
+    while (getWord(strStart, &word)) {
+        *bagStart++ = word;
+        bag->size++;
+        strStart = word.end;
+    }
+}
+
+void printWord(WordDescriptor word) {
+    char *end = word.end;
+    for (char *start = word.begin; start < end; ++start)
+        printf("%c", *start);
+    printf("\n");
 }
