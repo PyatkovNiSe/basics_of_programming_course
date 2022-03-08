@@ -1,7 +1,14 @@
 #ifndef LAB_5B_TASKS_H
 #define LAB_5B_TASKS_H
 
-#include <stdbool.h>
+#include "../string/tasks/string_.h"
+
+typedef enum WordBeforeFirstWordWithAReturnCode {
+    FIRST_WORD_WITH_A,
+    NOT_FOUND_A_WORD_WITH_A,
+    WORD_FOUND,
+    EMPTY_STRING
+} WordBeforeFirstWordWithAReturnCode;
 
 // Удалить из строки все пробельные символы
 void removeNonLetters(char *s);
@@ -40,5 +47,9 @@ void makeMixedStringFromTwo(char *s1, char *s2, char *sWrite);
 
 // Преобразовать строку, изменив порядок следования слов в строке на обратный
 void reverseWordOrder(char *s);
+
+// Вывести слово данной строки, предшествующее первому из слов,
+// содержащих букву "а"
+WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(char *s, WordDescriptor *word);
 
 #endif
