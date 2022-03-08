@@ -148,6 +148,13 @@ int findWordInBag(BagOfWords *bag, WordDescriptor word) {
     return -1;
 }
 
+void printWord(WordDescriptor word) {
+    char *end = word.end;
+    for (char *start = word.begin; start < end; ++start)
+        printf("%c", *start);
+    printf("\n");
+}
+
 void wordDescriptorToString(WordDescriptor word, char *str) {
     str = copy(word.begin, word.end, str);
     *str = '\0';

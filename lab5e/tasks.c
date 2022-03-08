@@ -2,6 +2,7 @@
 #include "../string/tasks/string_.h"
 #include <ctype.h>
 #include <memory.h>
+#include <stdio.h>
 
 void removeNonLetters(char *s) {
     char *endSrc = getEndOfString(s);
