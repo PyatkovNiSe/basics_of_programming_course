@@ -13,6 +13,7 @@ void removeAdjacentEqualLetters(char *s);
 // словами данного предложения до одного
 void removeExtraSpaces(char *s);
 
-
+// Преобразовать строку, обратив каждое слово этой строки
+void reverseWordsInString(char *s);
 
 #endif

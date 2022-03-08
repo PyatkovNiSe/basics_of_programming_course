@@ -47,8 +47,30 @@ static void test_removeExtraSpaces_commonCase() {
     ASSERT_STRING(assumedStr, str);
 }
 
+static void test_reverseWord_commonCase() {
+    char str[] = "qwerty 238";
+
+    reverseWordsInString(str);
+
+    char assumedStr[] = "ytrewq 832";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
+static void test_reverseWord_emptyString() {
+    char str[] = "";
+
+    reverseWordsInString(str);
+
+    char assumedStr[] = "";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
     test_removeExtraSpaces_commonCase();
+    test_reverseWord_commonCase();
+    test_reverseWord_emptyString();
 }
