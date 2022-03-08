@@ -30,4 +30,7 @@ bool isLexicographicOrdered(char *s);
 // Вывести слова данной строки в обратном порядке по одному в строке экрана
 void printWordsInReverseOrder(char *s);
 
+// Определить количество слов-палиндромов
+int countPalindromeWordsSeparatedWithComma(char *s);
+
 #endif

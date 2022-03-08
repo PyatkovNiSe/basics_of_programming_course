@@ -120,6 +120,22 @@ static void test_isLexicographicOrdered_isNotOrdered() {
     assert(isLexicographicOrdered(str) == false);
 }
 
+static void test_countPalindromeWordsSeparatedWithComma_commonCase() {
+    char str[] = "botob,deked,abcdedcba,code";
+
+    int assumedResult = 3;
+
+    assert(countPalindromeWordsSeparatedWithComma(str) == assumedResult);
+}
+
+static void test_countPalindromeWordsSeparatedWithComma_emptyString() {
+    char str[] = "";
+
+    int assumedResult = 0;
+
+    assert(countPalindromeWordsSeparatedWithComma(str) == assumedResult);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
@@ -132,4 +148,6 @@ void lab5e_test() {
     test_replaceWord_emptyString();
     test_isLexicographicOrdered_isOrdered();
     test_isLexicographicOrdered_isNotOrdered();
+    test_countPalindromeWordsSeparatedWithComma_commonCase();
+    test_countPalindromeWordsSeparatedWithComma_emptyString();
 }
