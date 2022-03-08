@@ -1,6 +1,7 @@
 #include "tasks.h"
 #include "../string/tasks/string_.h"
 #include <ctype.h>
+#include <memory.h>
 
 static bool alwaysTrue(int ch) {
     return true;
@@ -57,4 +58,21 @@ void reverseWordsInString(char *s) {
         reverseWord(word);
         beginSearch = word.end;
     }
+}
+
+void replaceNumbersWithSpaces(char *s) {
+    char *endOfBuff = copy(s, s + strlen(s), _stringBuffer);
+    char *start = _stringBuffer;
+
+    memset(s, ' ', MAX_STRING_SIZE);
+
+    while (start != endOfBuff) {
+        if (!isdigit(*start))
+            *s++ = *start;
+        else
+            s += *start - '0';
+        start++;
+    }
+
+    *s = '\0';
 }

@@ -67,10 +67,32 @@ static void test_reverseWord_emptyString() {
     ASSERT_STRING(assumedStr, str);
 }
 
+static void test_replaceNumbersWithSpaces_commonCase() {
+    char str[MAX_STRING_SIZE] = "A3B0C1";
+
+    replaceNumbersWithSpaces(str);
+
+    char assumedStr[] = "A   BC ";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
+static void test_replaceNumbersWithSpaces_emptyString() {
+    char str[MAX_STRING_SIZE] = "";
+
+    replaceNumbersWithSpaces(str);
+
+    char assumedStr[] = "";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
     test_removeExtraSpaces_commonCase();
     test_reverseWord_commonCase();
     test_reverseWord_emptyString();
+    test_replaceNumbersWithSpaces_commonCase();
+    test_replaceNumbersWithSpaces_emptyString();
 }

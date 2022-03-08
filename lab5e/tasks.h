@@ -16,4 +16,8 @@ void removeExtraSpaces(char *s);
 // Преобразовать строку, обратив каждое слово этой строки
 void reverseWordsInString(char *s);
 
+// Преобразовать строку, заменяя каждую цифру
+// соответствующим ей числом пробелов
+void replaceNumbersWithSpaces(char *s);
+
 #endif
