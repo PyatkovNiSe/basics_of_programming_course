@@ -20,3 +20,19 @@ void removeAdjacentEqualLetters(char *s) {
     }
     *(++previous) = '\0';
 }
+
+void removeExtraSpaces(char *s) {
+    if (!(*s))
+        return;
+
+    char *writePos = s;
+    s++;
+    while (*s) {
+        if (isspace(*writePos) && isspace(*s))
+            *writePos = ' ';
+        else
+            *(++writePos) = *s;
+        s++;
+    }
+    *(++writePos) = '\0';
+}

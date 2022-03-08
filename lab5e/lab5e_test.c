@@ -37,7 +37,18 @@ static void test_removeAdjacentEqualLetters_commonCase() {
     ASSERT_STRING(assumedStr, str);
 }
 
+static void test_removeExtraSpaces_commonCase() {
+    char str[] = "q\t\t  werty k\tbbb  dg";
+
+    removeExtraSpaces(str);
+
+    char assumedStr[] = "q werty k\tbbb dg";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
+    test_removeExtraSpaces_commonCase();
 }

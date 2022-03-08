@@ -9,4 +9,10 @@ void removeNonLetters(char *s);
 // последовательности подряд идущих одинаковых символов
 void removeAdjacentEqualLetters(char *s);
 
+// Сократить количество пробелов между
+// словами данного предложения до одного
+void removeExtraSpaces(char *s);
+
+
+
 #endif
