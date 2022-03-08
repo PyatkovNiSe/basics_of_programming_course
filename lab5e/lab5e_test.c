@@ -68,11 +68,11 @@ static void test_reverseWord_emptyString() {
 }
 
 static void test_replaceNumbersWithSpaces_commonCase() {
-    char str[MAX_STRING_SIZE] = "A3B0C1";
+    char str[MAX_STRING_SIZE] = "s0m3sp4c3";
 
     replaceNumbersWithSpaces(str);
 
-    char assumedStr[] = "A   BC ";
+    char assumedStr[] = "sm   sp    c   ";
 
     ASSERT_STRING(assumedStr, str);
 }
@@ -87,6 +87,26 @@ static void test_replaceNumbersWithSpaces_emptyString() {
     ASSERT_STRING(assumedStr, str);
 }
 
+static void test_replaceWord_commonCase() {
+    char str[MAX_STRING_SIZE] = "jili bili biba and boba";
+
+    replaceWord(str, "biba", "boba");
+
+    char assumedStr[] = "jili bili boba and boba";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
+static void test_replaceWord_emptyString() {
+    char str[MAX_STRING_SIZE] = "";
+
+    replaceWord(str, "biba", "boba");
+
+    char assumedStr[] = "";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
@@ -95,4 +115,6 @@ void lab5e_test() {
     test_reverseWord_emptyString();
     test_replaceNumbersWithSpaces_commonCase();
     test_replaceNumbersWithSpaces_emptyString();
+    test_replaceWord_commonCase();
+    test_replaceWord_emptyString();
 }

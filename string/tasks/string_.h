@@ -80,4 +80,6 @@ bool getWord(char *beginSearch, WordDescriptor *word);
 // будут записаны позиции конца слова, и первого символа после начала слова
 bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word);
 
+bool wordcmp(WordDescriptor w1, WordDescriptor w2);
+
 #endif

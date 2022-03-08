@@ -20,4 +20,7 @@ void reverseWordsInString(char *s);
 // соответствующим ей числом пробелов
 void replaceNumbersWithSpaces(char *s);
 
+// Заменить все вхождения слова 𝑤1 на слово 𝑤2
+void replaceWord(char *source, char *w1, char *w2);
+
 #endif
