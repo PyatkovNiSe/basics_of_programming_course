@@ -52,4 +52,8 @@ void reverseWordOrder(char *s);
 // содержащих букву "а"
 WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(char *s, WordDescriptor *word);
 
+// Определить последнее из слов первой строки, которое есть
+// во второй строке
+bool lastWordInFirstStringInSecondString(char *str1, char *str2, WordDescriptor *word);
+
 #endif

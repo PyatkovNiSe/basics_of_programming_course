@@ -95,4 +95,8 @@ void getBagOfWords(BagOfWords *bag, char *s);
 
 void printWord(WordDescriptor word);
 
+int findWordInBag(BagOfWords *bag, WordDescriptor word);
+
+void wordDescriptorToString(WordDescriptor word, char *str);
+
 #endif

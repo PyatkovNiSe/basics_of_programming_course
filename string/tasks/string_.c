@@ -179,3 +179,22 @@ int countPalindromeWordsSeparatedWithComma(char *s) {
 
     return counter;
 }
+
+int findWordInBag(BagOfWords *bag, WordDescriptor word) {
+    const WordDescriptor *currentWord = bag->words;
+    const WordDescriptor *lastWord = bag->words + bag->size;
+
+    while (currentWord < lastWord) {
+        if (wordcmp(*currentWord, word))
+            return currentWord - bag->words;
+
+        currentWord++;
+    }
+
+    return -1;
+}
+
+void wordDescriptorToString(WordDescriptor word, char *str) {
+    str = copy(word.begin, word.end, str);
+    *str = '\0';
+}

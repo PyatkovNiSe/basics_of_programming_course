@@ -207,6 +207,31 @@ static void testAll_getWordBeforeFirstWordWithA() {
             == NOT_FOUND_A_WORD_WITH_A);
 }
 
+static void test_lastWordInFirstStringInSecondString_commonCase() {
+    char str1[] = "when you when you";
+    char str2[] = "you writing tests";
+
+    WordDescriptor word;
+    lastWordInFirstStringInSecondString(str1, str2, &word);
+
+    char result[MAX_STRING_SIZE];
+    wordDescriptorToString(word, result);
+
+    char assumedStr[] = "you";
+
+    ASSERT_STRING(assumedStr, result);
+}
+
+static void test_lastWordInFirstStringInSecondString_emptyString() {
+    char str1[] = "";
+    char str2[] = "when you writing tests";
+
+    WordDescriptor word;
+    bool status = lastWordInFirstStringInSecondString(str1, str2, &word);
+
+    assert(status == false);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
@@ -226,4 +251,6 @@ void lab5e_test() {
     test_reverseWordOrder_commonCase();
     test_reverseWordOrder_emptyString();
     testAll_getWordBeforeFirstWordWithA();
+    test_lastWordInFirstStringInSecondString_commonCase();
+    test_lastWordInFirstStringInSecondString_emptyString();
 }
