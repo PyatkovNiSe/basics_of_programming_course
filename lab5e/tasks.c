@@ -77,3 +77,32 @@ void replaceNumbersWithSpaces(char *s) {
     *s = '\0';
 }
 
+void replaceWord(char *source, char *w1, char *w2) {
+    size_t w1Size = strlen(w1);
+    size_t w2Size = strlen(w2);
+    WordDescriptor word1 = {w1, w1 + w1Size};
+    WordDescriptor word2 = {w2, w2 + w2Size};
+
+    char *readPtr, *recPtr;
+    recPtr = source;
+    if (w1Size >= w2Size) {
+        readPtr = source;
+    } else {
+        char *endOfBuff = copy(source, getEndOfString(source), _stringBuffer);
+        *endOfBuff = '\0';
+        readPtr = _stringBuffer;
+    }
+
+    WordDescriptor currentWord;
+    while (getWord(readPtr, &currentWord)) {
+        if (wordcmp(word1, currentWord)) {
+            recPtr = copy(word2.begin, word2.end, recPtr);
+        } else
+            recPtr = copy(currentWord.begin, currentWord.end, recPtr);
+        *recPtr++ = ' ';
+        readPtr = currentWord.end;
+    }
+
+    if (recPtr != source)
+        *--recPtr = '\0';
+}
