@@ -58,4 +58,6 @@ WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
 bool lastWordInFirstStringInSecondString(char *str1, char *str2,
                                          WordDescriptor *word);
 
+
+
 #endif

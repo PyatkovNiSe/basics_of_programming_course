@@ -132,6 +132,18 @@ void printWordsInReverseOrder(char *s) {
         printWord(*start);
 }
 
+static bool getWordCommaSeparated(char *source, WordDescriptor *word) {
+    word->begin = findNonSpace(source);
+    if (*word->begin == '\0')
+        return false;
+
+    word->end = find(word->begin, source + strlen(source), ',');
+    if (*word->end == '\0')
+        word->end = findSpace(word->begin);
+
+    return true;
+}
+
 static bool isPalindrome(WordDescriptor word) {
     char *start = word.begin;
     char *end = word.end - 1;

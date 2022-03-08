@@ -93,8 +93,6 @@ bool wordcmp(WordDescriptor w1, WordDescriptor w2);
 // Получает позиции начала и конца каждого слова строки
 void getBagOfWords(BagOfWords *bag, char *s);
 
-void printWord(WordDescriptor word);
-
 int findWordInBag(BagOfWords *bag, WordDescriptor word);
 
 void wordDescriptorToString(WordDescriptor word, char *str);
