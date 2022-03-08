@@ -136,6 +136,30 @@ static void test_countPalindromeWordsSeparatedWithComma_emptyString() {
     assert(countPalindromeWordsSeparatedWithComma(str) == assumedResult);
 }
 
+static void test_makeMixedStringFromTwo_commonCase() {
+    char str1[] = "qwerty first top";
+    char str2[] = "is on";
+    char str[MAX_STRING_SIZE];
+
+    makeMixedStringFromTwo(str1, str2, str);
+
+    char assumedStr[] = "qwerty is first on top";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
+static void test_makeMixedStringFromTwo_emptyStrings() {
+    char str1[] = "";
+    char str2[] = "";
+    char str[MAX_STRING_SIZE] = "qwewqweg";
+
+    makeMixedStringFromTwo(str1, str2, str);
+
+    char assumedStr[] = "";
+
+    ASSERT_STRING(assumedStr, str);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
@@ -150,4 +174,6 @@ void lab5e_test() {
     test_isLexicographicOrdered_isNotOrdered();
     test_countPalindromeWordsSeparatedWithComma_commonCase();
     test_countPalindromeWordsSeparatedWithComma_emptyString();
+    test_makeMixedStringFromTwo_commonCase();
+    test_makeMixedStringFromTwo_emptyStrings();
 }
