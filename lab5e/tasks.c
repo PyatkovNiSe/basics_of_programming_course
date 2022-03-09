@@ -213,7 +213,8 @@ void reverseWordOrder(char *s) {
         *--start = '\0';
 }
 
-WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(char *s, WordDescriptor *word) {
+WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
+        char *s, WordDescriptor *word) {
     WordDescriptor previousWord;
     char *start = s;
 
@@ -256,6 +257,20 @@ bool lastWordInFirstStringInSecondString(char *str1, char *str2,
 
         end = currentWord.begin;
     }
+
+    return false;
+}
+
+bool hasEqualWords(char *s) {
+    getBagOfWords(&_bag, s);
+    if (_bag.size <= 1)
+        return false;
+
+    WordDescriptor *endOfBag = _bag.words + _bag.size;
+    for (WordDescriptor *i = _bag.words; i < endOfBag; ++i)
+        for (WordDescriptor *j = i + 1; j < endOfBag; ++j)
+            if (wordcmp(*i, *j))
+                return true;
 
     return false;
 }

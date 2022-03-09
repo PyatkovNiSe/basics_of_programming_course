@@ -232,6 +232,18 @@ static void test_lastWordInFirstStringInSecondString_emptyString() {
     assert(status == false);
 }
 
+static void test_hasEqualWords_commonCase() {
+    char str[] = "testi delat pisat testi nado";
+
+    assert(hasEqualWords(str) == true);
+}
+
+static void test_hasEqualWords_emptyString() {
+    char str[] = "";
+
+    assert(hasEqualWords(str) == true);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
@@ -253,4 +265,6 @@ void lab5e_test() {
     testAll_getWordBeforeFirstWordWithA();
     test_lastWordInFirstStringInSecondString_commonCase();
     test_lastWordInFirstStringInSecondString_emptyString();
+    test_hasEqualWords_commonCase();
+    test_hasEqualWords_emptyString();
 }

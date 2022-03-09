@@ -29,6 +29,8 @@ ctype.h
 -
 memory.h
 -
+stdio.h
+-
 
 C:/Users/oosko/CLionProjects/course/lab5e/tasks.h
 ../string/tasks/string_.h

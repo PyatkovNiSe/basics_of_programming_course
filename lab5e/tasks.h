@@ -58,6 +58,7 @@ WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
 bool lastWordInFirstStringInSecondString(char *str1, char *str2,
                                          WordDescriptor *word);
 
-
+// Определить, есть ли в данной строке одинаковые слова
+bool hasEqualWords(char *s);
 
 #endif
