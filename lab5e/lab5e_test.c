@@ -256,6 +256,28 @@ static void test_hasWordsCreatedWithTheSameLetters_emptyString() {
     assert(hasWordsCreatedWithTheSameLetters(str) == false);
 }
 
+static void test_getStringOfWordsThatDoNotEqualToTheLast_commonCase() {
+    char str[] = "qwa def set qwa";
+    char dist[MAX_STRING_SIZE];
+
+    getStringOfWordsThatDoNotEqualToTheLast(str, dist);
+
+    char assumedStr[] = "def set qwa";
+
+    ASSERT_STRING(assumedStr, dist);
+}
+
+static void test_getStringOfWordsThatDoNotEqualToTheLast_emptyString() {
+    char str[] = "";
+    char dist[MAX_STRING_SIZE];
+
+    getStringOfWordsThatDoNotEqualToTheLast(str, dist);
+
+    char assumedStr[] = "";
+
+    ASSERT_STRING(assumedStr, dist);
+}
+
 void lab5e_test() {
     test_removeNonLetters_commonCase();
     test_removeAdjacentEqualLetters_commonCase();
@@ -281,4 +303,6 @@ void lab5e_test() {
     test_hasEqualWords_emptyString();
     test_hasWordsCreatedWithTheSameLetters_commonCase();
     test_hasWordsCreatedWithTheSameLetters_emptyString();
+    test_getStringOfWordsThatDoNotEqualToTheLast_commonCase();
+    test_getStringOfWordsThatDoNotEqualToTheLast_emptyString();
 }

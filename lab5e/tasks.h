@@ -65,4 +65,7 @@ bool hasEqualWords(char *s);
 // составленных из одинаковых букв
 bool hasWordsCreatedWithTheSameLetters(char *s);
 
+// Получить строку из слов данной строки, которые отличны от последнего слова
+void getStringOfWordsThatDoNotEqualToTheLast(char *source, char *dist);
+
 #endif
