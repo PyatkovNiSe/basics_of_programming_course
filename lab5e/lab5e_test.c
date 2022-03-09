@@ -241,7 +241,19 @@ static void test_hasEqualWords_commonCase() {
 static void test_hasEqualWords_emptyString() {
     char str[] = "";
 
-    assert(hasEqualWords(str) == true);
+    assert(hasEqualWords(str) == false);
+}
+
+static void test_hasWordsCreatedWithTheSameLetters_commonCase() {
+    char str[] = "qwrty qake sorry";
+
+    assert(hasWordsCreatedWithTheSameLetters(str) == true);
+}
+
+static void test_hasWordsCreatedWithTheSameLetters_emptyString() {
+    char str[] = "";
+
+    assert(hasWordsCreatedWithTheSameLetters(str) == false);
 }
 
 void lab5e_test() {
@@ -267,4 +279,6 @@ void lab5e_test() {
     test_lastWordInFirstStringInSecondString_emptyString();
     test_hasEqualWords_commonCase();
     test_hasEqualWords_emptyString();
+    test_hasWordsCreatedWithTheSameLetters_commonCase();
+    test_hasWordsCreatedWithTheSameLetters_emptyString();
 }

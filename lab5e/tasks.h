@@ -61,4 +61,8 @@ bool lastWordInFirstStringInSecondString(char *str1, char *str2,
 // Определить, есть ли в данной строке одинаковые слова
 bool hasEqualWords(char *s);
 
+// Определить, есть ли в данной строке пара слов,
+// составленных из одинаковых букв
+bool hasWordsCreatedWithTheSameLetters(char *s);
+
 #endif
