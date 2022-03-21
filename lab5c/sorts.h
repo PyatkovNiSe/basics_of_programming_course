@@ -7,4 +7,8 @@ void mergeSort(int *a, size_t n);
 
 long long getMergeSortComps(int *a, size_t n);
 
+void selectionSort(int *a, size_t n);
+
+long long getSelectionSortComps(int *a, size_t n);
+
 #endif

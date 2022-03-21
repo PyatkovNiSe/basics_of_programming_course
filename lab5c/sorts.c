@@ -55,3 +55,16 @@ void mergeSort(int *a, const size_t n) {
     free(buffer);
 }
 
+void selectionSort(int *a, const size_t n) {
+    if (n <= 1)
+        return;
+    for (size_t i = 0; i < n; ++i) {
+        size_t currentIndex = i;
+        for (size_t j = i + 1; j < n; j++) {
+            if (a[j] < a[currentIndex])
+                currentIndex = j;
+        }
+        SWAP(&a[i], &a[currentIndex]);
+    }
+}
+
