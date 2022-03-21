@@ -15,4 +15,8 @@ void insertionSort(int *a, size_t n);
 
 long long getInsertionSortComps(int *a, size_t n);
 
+void combSort(int *a, size_t n);
+
+long long getCombSortComps(int *a, size_t n);
+
 #endif

@@ -80,3 +80,20 @@ void insertionSort(int *a, const size_t n) {
     }
 }
 
+void combSort(int *a, const size_t n) {
+    double factor = 1.24733;
+    size_t step = n;
+    bool swapped = true;
+    while (step > 1 || swapped) {
+        if (step > 1)
+            step /= factor;
+        swapped = false;
+        for (size_t i = 0, j = i + step; j < n; ++i, ++j) {
+            if (a[i] > a[j]) {
+                SWAP(&a[i], &a[j]);
+                swapped = true;
+            }
+        }
+    }
+}
+
