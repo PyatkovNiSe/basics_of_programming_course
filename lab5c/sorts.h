@@ -27,4 +27,6 @@ void LSD_sort(int *a, size_t n);
 
 long long getLSD_sortComps(int *a, size_t n);
 
+void stdlibQsort(int *a, size_t n);
+
 #endif
