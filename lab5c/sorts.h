@@ -5,4 +5,6 @@
 
 void mergeSort(int *a, size_t n);
 
+long long getMergeSortComps(int *a, size_t n);
+
 #endif
