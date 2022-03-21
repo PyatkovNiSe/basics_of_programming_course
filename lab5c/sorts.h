@@ -11,4 +11,8 @@ void selectionSort(int *a, size_t n);
 
 long long getSelectionSortComps(int *a, size_t n);
 
+void insertionSort(int *a, size_t n);
+
+long long getInsertionSortComps(int *a, size_t n);
+
 #endif
