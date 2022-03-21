@@ -9,9 +9,10 @@
 					"childIndexes" : 
 					[
 						1,
-						4,
 						5,
-						6
+						6,
+						7,
+						8
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -30,7 +31,8 @@
 					"childIndexes" : 
 					[
 						2,
-						3
+						3,
+						4
 					],
 					"jsonFile" : "directory-libs-Debug-dd7a5ca29a7a50124f40.json",
 					"minimumCMakeVersion" : 
@@ -72,6 +74,36 @@
 					]
 				},
 				{
+					"build" : "libs/generating",
+					"jsonFile" : "directory-libs.generating-Debug-36b58c71dc20d3eabac2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "libs/generating",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "lab5c",
+					"jsonFile" : "directory-lab5c-Debug-5ea2e9f80f3d674d7812.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lab5c",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
 					"build" : "lab5d",
 					"jsonFile" : "directory-lab5d-Debug-b53b7e2ba5a473ada375.json",
 					"minimumCMakeVersion" : 
@@ -83,7 +115,7 @@
 					"source" : "lab5d",
 					"targetIndexes" : 
 					[
-						3
+						5
 					]
 				},
 				{
@@ -98,14 +130,14 @@
 					"source" : "lab5e",
 					"targetIndexes" : 
 					[
-						4
+						6
 					]
 				},
 				{
 					"build" : "string",
 					"childIndexes" : 
 					[
-						7
+						9
 					],
 					"jsonFile" : "directory-string-Debug-ca06b61e63f80ea8e244.json",
 					"minimumCMakeVersion" : 
@@ -123,12 +155,12 @@
 					{
 						"string" : "3.20"
 					},
-					"parentIndex" : 6,
+					"parentIndex" : 8,
 					"projectIndex" : 0,
 					"source" : "string/tasks",
 					"targetIndexes" : 
 					[
-						5
+						7
 					]
 				}
 			],
@@ -145,7 +177,9 @@
 						4,
 						5,
 						6,
-						7
+						7,
+						8,
+						9
 					],
 					"name" : "course",
 					"targetIndexes" : 
@@ -155,7 +189,9 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6,
+						7
 					]
 				}
 			],
@@ -164,14 +200,14 @@
 				{
 					"directoryIndex" : 3,
 					"id" : "algorithms::@4f84be16bc75261b2db5",
-					"jsonFile" : "target-algorithms-Debug-b5bc11e9f8ae4544b2d1.json",
+					"jsonFile" : "target-algorithms-Debug-d568b116fb8136d57d2a.json",
 					"name" : "algorithms",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "course::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-course-Debug-a2456e0a488a6750e9d3.json",
+					"jsonFile" : "target-course-Debug-e3e019fc836b31c00c1e.json",
 					"name" : "course",
 					"projectIndex" : 0
 				},
@@ -184,20 +220,34 @@
 				},
 				{
 					"directoryIndex" : 4,
+					"id" : "generating::@44262a4f1dc5ded9642e",
+					"jsonFile" : "target-generating-Debug-8169dd4e9ebd3fe0e4ab.json",
+					"name" : "generating",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "lab5c::@95a81010cb1ee62676e4",
+					"jsonFile" : "target-lab5c-Debug-f902f06a6f9866b0816a.json",
+					"name" : "lab5c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
 					"id" : "lab5d::@178384634ee2f654e232",
 					"jsonFile" : "target-lab5d-Debug-1fa42ce197280bc30ff2.json",
 					"name" : "lab5d",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 5,
+					"directoryIndex" : 7,
 					"id" : "lab5e::@d7cdb6376a1c1a044d89",
 					"jsonFile" : "target-lab5e-Debug-afad1d5ce79c3ea32583.json",
 					"name" : "lab5e",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 7,
+					"directoryIndex" : 9,
 					"id" : "tasks::@417cc2c019ab216dae87",
 					"jsonFile" : "target-tasks-Debug-fa7f5c63837d9d272c0c.json",
 					"name" : "tasks",

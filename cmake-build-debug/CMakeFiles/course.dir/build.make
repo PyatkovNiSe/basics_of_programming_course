@@ -89,9 +89,12 @@ course.exe: CMakeFiles/course.dir/main.c.obj
 course.exe: CMakeFiles/course.dir/build.make
 course.exe: libs/data_structures/libdata_structures.a
 course.exe: libs/algorithms/libalgorithms.a
+course.exe: libs/generating/libgenerating.a
+course.exe: lab5c/liblab5c.a
 course.exe: lab5d/liblab5d.a
 course.exe: lab5e/liblab5e.a
 course.exe: string/tasks/libtasks.a
+course.exe: libs/generating/libgenerating.a
 course.exe: libs/data_structures/libdata_structures.a
 course.exe: libs/algorithms/libalgorithms.a
 course.exe: CMakeFiles/course.dir/linklibs.rsp

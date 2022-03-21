@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/oosko/CLionProjects/course/libs/generating/generatingFunc.c
+generatingFunc.h
+C:/Users/oosko/CLionProjects/course/libs/generating/generatingFunc.h
+stdlib.h
+-
+time.h
+-
+limits.h
+-
+
+C:/Users/oosko/CLionProjects/course/libs/generating/generatingFunc.h
+stdlib.h
+-
+

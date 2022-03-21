@@ -126,6 +126,12 @@
 			"path" : "libs/algorithms/CMakeLists.txt"
 		},
 		{
+			"path" : "libs/generating/CMakeLists.txt"
+		},
+		{
+			"path" : "lab5c/CMakeLists.txt"
+		},
+		{
 			"path" : "lab5d/CMakeLists.txt"
 		},
 		{

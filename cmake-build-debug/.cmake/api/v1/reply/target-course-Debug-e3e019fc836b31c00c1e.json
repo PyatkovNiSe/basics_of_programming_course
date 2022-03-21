@@ -34,12 +34,6 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 13,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
 				"line" : 14,
 				"parent" : 0
 			},
@@ -59,6 +53,24 @@
 				"command" : 1,
 				"file" : 0,
 				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
 				"parent" : 0
 			}
 		]
@@ -102,14 +114,22 @@
 		},
 		{
 			"backtrace" : 4,
+			"id" : "generating::@44262a4f1dc5ded9642e"
+		},
+		{
+			"backtrace" : 6,
 			"id" : "lab5d::@178384634ee2f654e232"
 		},
 		{
-			"backtrace" : 5,
+			"backtrace" : 7,
 			"id" : "lab5e::@d7cdb6376a1c1a044d89"
 		},
 		{
 			"backtrace" : 5,
+			"id" : "lab5c::@95a81010cb1ee62676e4"
+		},
+		{
+			"backtrace" : 7,
 			"id" : "tasks::@417cc2c019ab216dae87"
 		}
 	],
@@ -138,17 +158,32 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "lab5d\\liblab5d.a",
+				"fragment" : "libs\\generating\\libgenerating.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "lab5e\\liblab5e.a",
+				"fragment" : "lab5c\\liblab5c.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
+				"fragment" : "lab5d\\liblab5d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "lab5e\\liblab5e.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
 				"fragment" : "string\\tasks\\libtasks.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "libs\\generating\\libgenerating.a",
 				"role" : "libraries"
 			},
 			{

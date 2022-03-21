@@ -5,7 +5,7 @@
 		<Option title="course"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;CMake Files\lab5d\;CMake Files\lab5e\;CMake Files\string\;CMake Files\string\tasks\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;CMake Files\libs\generating\;CMake Files\lab5c\;CMake Files\lab5d\;CMake Files\lab5e\;CMake Files\string\;CMake Files\string\tasks\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/oosko/CLionProjects/course/cmake-build-debug"/>
@@ -145,6 +145,78 @@
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="generating">
+				<Option output="C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/libgenerating.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/Makefile&quot;  VERBOSE=1 generating"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="generating/fast">
+				<Option output="C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/libgenerating.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/Makefile&quot;  VERBOSE=1 generating/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab5c">
+				<Option output="C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/liblab5c.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/Makefile&quot;  VERBOSE=1 lab5c"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab5c/fast">
+				<Option output="C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/liblab5c.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/Makefile&quot;  VERBOSE=1 lab5c/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="lab5d">
 				<Option output="C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5d/liblab5d.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5d"/>
@@ -254,6 +326,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5c/sorts.c">
+			<Option target="lab5c"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5c/sorts.h">
+			<Option target="lab5c"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5c/test_sorts.c">
+			<Option target="lab5c"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5c/test_sorts.h">
+			<Option target="lab5c"/>
+		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5d/tasks.c">
 			<Option target="lab5d"/>
 		</Unit>
@@ -314,6 +398,12 @@
 		<Unit filename="C:/Users/oosko/CLionProjects/course/libs/data_structures/vector/vector.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/libs/generating/generatingFunc.c">
+			<Option target="generating"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/libs/generating/generatingFunc.h">
+			<Option target="generating"/>
+		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/course/main.c">
 			<Option target="course"/>
 		</Unit>
@@ -340,6 +430,12 @@
 		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/course/libs/algorithms/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\algorithms\"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/libs/generating/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\generating\"/>
+		</Unit>
+		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5c/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lab5c\"/>
 		</Unit>
 		<Unit filename="C:/Users/oosko/CLionProjects/course/lab5d/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lab5d\"/>

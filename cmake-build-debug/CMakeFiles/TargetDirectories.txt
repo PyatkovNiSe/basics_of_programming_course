@@ -9,6 +9,12 @@ C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/data_structures/CMake
 C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir
 C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/algorithms/CMakeFiles/edit_cache.dir
 C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/algorithms/CMakeFiles/rebuild_cache.dir
+C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/CMakeFiles/rebuild_cache.dir
+C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/CMakeFiles/generating.dir
+C:/Users/oosko/CLionProjects/course/cmake-build-debug/libs/generating/CMakeFiles/edit_cache.dir
+C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/CMakeFiles/edit_cache.dir
+C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/CMakeFiles/lab5c.dir
+C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5c/CMakeFiles/rebuild_cache.dir
 C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5d/CMakeFiles/rebuild_cache.dir
 C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5d/CMakeFiles/lab5d.dir
 C:/Users/oosko/CLionProjects/course/cmake-build-debug/lab5d/CMakeFiles/edit_cache.dir

@@ -155,6 +155,32 @@ algorithms/fast:
 .PHONY : algorithms/fast
 
 #=============================================================================
+# Target rules for targets named generating
+
+# Build rule for target.
+generating: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 generating
+.PHONY : generating
+
+# fast build rule for target.
+generating/fast:
+	$(MAKE) $(MAKESILENT) -f libs\generating\CMakeFiles\generating.dir\build.make libs/generating/CMakeFiles/generating.dir/build
+.PHONY : generating/fast
+
+#=============================================================================
+# Target rules for targets named lab5c
+
+# Build rule for target.
+lab5c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lab5c
+.PHONY : lab5c
+
+# fast build rule for target.
+lab5c/fast:
+	$(MAKE) $(MAKESILENT) -f lab5c\CMakeFiles\lab5c.dir\build.make lab5c/CMakeFiles/lab5c.dir/build
+.PHONY : lab5c/fast
+
+#=============================================================================
 # Target rules for targets named lab5d
 
 # Build rule for target.
@@ -228,6 +254,8 @@ help:
 	@echo ... algorithms
 	@echo ... course
 	@echo ... data_structures
+	@echo ... generating
+	@echo ... lab5c
 	@echo ... lab5d
 	@echo ... lab5e
 	@echo ... tasks

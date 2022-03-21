@@ -1,1 +1,1 @@
-add_library(algorithms array/array.c algorithm.c algorithm.h)
+add_library(algorithms array/array.h array/array.c algorithm.c algorithm.h)
