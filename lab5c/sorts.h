@@ -19,4 +19,8 @@ void combSort(int *a, size_t n);
 
 long long getCombSortComps(int *a, size_t n);
 
+void shellSort(int *a, size_t n);
+
+long long getShellSortComps(int *a, size_t n);
+
 #endif

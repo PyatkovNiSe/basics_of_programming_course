@@ -97,3 +97,10 @@ void combSort(int *a, const size_t n) {
     }
 }
 
+void shellSort(int *a, size_t n) {
+    for (int d = n / 2; d > 0; d /= 2)
+        for (int i = d; i < n; ++i)
+            for (int j = i - d; j >= 0 && a[j] > a[j + d]; j -= d)
+                SWAP(&a[j], &a[j + d]);
+}
+
