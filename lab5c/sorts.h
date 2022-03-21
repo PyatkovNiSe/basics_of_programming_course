@@ -23,4 +23,8 @@ void shellSort(int *a, size_t n);
 
 long long getShellSortComps(int *a, size_t n);
 
+void LSD_sort(int *a, size_t n);
+
+long long getLSD_sortComps(int *a, size_t n);
+
 #endif

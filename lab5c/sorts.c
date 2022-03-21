@@ -104,3 +104,54 @@ void shellSort(int *a, size_t n) {
                 SWAP(&a[j], &a[j + d]);
 }
 
+static long long getPrefixSums(int *a, size_t n) {
+    long long nComps = 0;
+
+    int prev = a[0];
+    *a = 0;
+    for (int i = 1; ++nComps && i < n; i++) {
+        int t = a[i];
+        a[i] = prev + a[i - 1];
+        prev = t;
+    }
+
+    return nComps;
+}
+
+void LSD_sort(int *a, size_t n) {
+    int *buffer = (int *) calloc(n, sizeof(int));
+
+    const int STEP = 8;
+    const int MASK = 0b11111111;
+
+    for (int byte = 0; byte < sizeof(int); byte++) {
+        int values[UCHAR_MAX + 1] = {0};
+
+        for (size_t i = 0; i < n; i++) {
+            int currentByte;
+            if (byte + 1 == sizeof(int))
+                currentByte = ((a[i] >> (byte * STEP)) + CHAR_MAX + 1) & MASK;
+            else
+                currentByte = (a[i] >> (byte * STEP)) & MASK;
+
+            values[currentByte]++;
+        }
+
+        getPrefixSums(values, UCHAR_MAX + 1);
+
+        for (size_t i = 0; i < n; i++) {
+            int currentByte;
+            if (byte + 1 == sizeof(int))
+                currentByte = ((a[i] >> (byte * STEP)) + CHAR_MAX + 1) & MASK;
+            else
+                currentByte = (a[i] >> (byte * STEP)) & MASK;
+
+            buffer[values[currentByte]++] = a[i];
+        }
+
+        memcpy(a, buffer, sizeof(int) * n);
+    }
+
+    free(buffer);
+}
+
