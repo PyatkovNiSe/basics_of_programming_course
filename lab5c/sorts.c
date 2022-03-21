@@ -54,3 +54,4 @@ void mergeSort(int *a, const size_t n) {
     _mergeSort(a, 0, n, buffer);
     free(buffer);
 }
+
