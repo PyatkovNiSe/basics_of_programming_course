@@ -9,11 +9,6 @@
 #include "lab5e/lab5e_test.h"
 
 #include "lab5c/test_sorts.h"
-#include <pthread.h>
-
-void *timeExperimentThr(void *a) {
-    timeExperiment();
-}
 
 int main() {
     //test_vector();
@@ -22,18 +17,8 @@ int main() {
     //string_test();
     //lab5e_test();
 
-    double time;
-    pthread_t timeExperimentThread;
-    getTime({
-                      pthread_create(&timeExperimentThread, NULL,
-                                     timeExperimentThr, NULL);
-              }, time);
-
+    timeExperiment();
     comparesExperiment();
-
-    pthread_join(timeExperimentThread, NULL);
-
-    printf("TimeToCreateThread: %f\n", time);
 
     return 0;
 }

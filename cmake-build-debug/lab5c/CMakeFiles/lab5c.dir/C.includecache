@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/oosko/CLionProjects/course/lab5c/sorts.c
-sorts.h
-C:/Users/oosko/CLionProjects/course/lab5c/sorts.h
-../libs/algorithms/algorithm.h
-C:/Users/oosko/CLionProjects/course/libs/algorithms/algorithm.h
-stdlib.h
--
-memory.h
--
-stdbool.h
--
-
 C:/Users/oosko/CLionProjects/course/lab5c/sorts.h
 stdio.h
 -
@@ -39,8 +27,6 @@ stdbool.h
 -
 time.h
 -
-
-C:/Users/oosko/CLionProjects/course/libs/algorithms/algorithm.h
 
 C:/Users/oosko/CLionProjects/course/libs/generating/generatingFunc.h
 stdlib.h

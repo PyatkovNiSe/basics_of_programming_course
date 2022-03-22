@@ -36,13 +36,11 @@ typedef struct SortFuncCompares {
 
 void checkTime(void (*sortFunc)(int *, size_t),
                void (*generateFunc)(int *, size_t),
-               size_t size, char *experimentName,
-               FILE *log_file);
+               size_t size, char *experimentName);
 
 void checkCompares(long long (*sortFunc)(int *, size_t),
                    void (*generateFunc)(int*, size_t),
-                   size_t size, char *experimentName,
-                   FILE *log_file);
+                   size_t size, char *experimentName);
 
 void timeExperiment();
 
